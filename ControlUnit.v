@@ -1,4 +1,4 @@
-module controlUnit(OpCode,
+module ControlUnit(OpCode,
                    Funct,
                    RegDst,
                    BranchEq,
@@ -21,7 +21,7 @@ module controlUnit(OpCode,
     // outputs (signals)
     output reg RegDst, BranchEq,BranchNeq,InvalidInst,Jump,JumpReg, MemRdEn, MemtoReg, MemWrEn, RegWrEn, ALUSrc2, ALUSrc1;
 
-    output reg [3:0] ALUOp; //changed to 4
+    output reg [3:0] ALUOp; //changed to 4 bits
     
     //! parameters (OpCodes/Functs) added opcodes and funct
     parameter _RType = 6'h0, _addi = 6'h8, _ori = 6'h0D, _xori = 6'h0E,_andi = 6'h0C,
@@ -52,7 +52,7 @@ module controlUnit(OpCode,
                 RegWrEn  = 1'b1;
                 ALUSrc1 = 1'b0;
                 ALUSrc2   = 1'b0;
-                Z
+                
                 case (Funct)
                     
                     _add_ : begin
@@ -98,8 +98,8 @@ module controlUnit(OpCode,
                     end
                     
                     default: begin
-                    ALUOp = 4'b1111;
-                    InvalidInst = 1'b1;
+                        ALUOp = 4'b1111;
+                        InvalidInst = 1'b1;
                     end
                     
                 endcase
