@@ -91,7 +91,7 @@ module DataMem (
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
 		altsyncram_component.intended_device_family = "MAX 10",
-		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
+		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=d1",
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 1024,
 		altsyncram_component.operation_mode = "SINGLE_PORT",

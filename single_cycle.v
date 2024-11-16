@@ -46,7 +46,7 @@ module single_cycle(clk,
     assign shamt = Instruction[10:6]; 
     
     wire PCEn; //!Added Enable to the PC so that we can halt the CPU
-    assign PCEn = ~InvalidInst;
+    assign PCEn = 1;
     ProgramCounter	 pc(
     .clk(clk),
     .rst(rst),

@@ -27,8 +27,10 @@ module ALU (operand1, operand2, opSel, result, zero);
             _SLT: result = (operand1 < operand2) ? 1 : 0;
             _XOR: result = operand1 ^ operand2; 
             _NOR: result = ~(operand1 | operand2); // NOR operation
+
             _SLL: result = operand1 << operand2;  // SLL - shift left logical
             _SRL: result = operand1 >> operand2;  // SRL - shift right logical
+            
             _SGT: result = (operand1 > operand2) ? 1 : 0;
             default: result = {data_width{1'b0}}; // Set to zero if no match
         endcase

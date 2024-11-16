@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Thu Nov 07 10:18:32 2024
+Thu Nov 07 11:04:38 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,8 +19,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|altsyncram_kve2:altsyncram1
- 15. Source assignments for DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated
+ 14. Source assignments for InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated
+ 15. Source assignments for DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1
  16. Parameter Settings for User Entity Instance: Adder:PCAdder
  17. Parameter Settings for User Entity Instance: InstMem:IM|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: ControlUnit:CU
@@ -38,13 +38,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  30. Port Connectivity Checks: "mux2x1:WBMux2_"
  31. Port Connectivity Checks: "mux2x1:ALUMux1_"
  32. Port Connectivity Checks: "mux2x1:RFMux_"
- 33. Port Connectivity Checks: "InstMem:IM"
- 34. Port Connectivity Checks: "Adder:PCAdder"
- 35. In-System Memory Content Editor Settings
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 33. Port Connectivity Checks: "ControlUnit:CU"
+ 34. Port Connectivity Checks: "InstMem:IM"
+ 35. Port Connectivity Checks: "Adder:PCAdder"
+ 36. Port Connectivity Checks: "ProgramCounter:pc"
+ 37. In-System Memory Content Editor Settings
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,18 +73,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 07 10:18:32 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 07 11:04:38 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; single_cycle                                ;
 ; Top-level Entity Name              ; single_cycle                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 247                                         ;
-;     Total combinational functions  ; 216                                         ;
-;     Dedicated logic registers      ; 154                                         ;
-; Total registers                    ; 154                                         ;
+; Total logic elements               ; 3,491                                       ;
+;     Total combinational functions  ; 2,500                                       ;
+;     Dedicated logic registers      ; 1,160                                       ;
+; Total registers                    ; 1160                                        ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 131,072                                     ;
+; Total memory bits                  ; 163,840                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -95,7 +97,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; single_cycle       ; single_cycle       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -189,7 +191,14 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -198,6 +207,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                        ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; InstMIF.mif                                                        ; yes             ; User Memory Initialization File              ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif                                                        ;             ;
 ; Adder.v                                                            ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v                                                            ;             ;
 ; ProgramCounter.v                                                   ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v                                                   ;             ;
 ; single_cycle.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v                                                     ;             ;
@@ -218,14 +228,13 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                   ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                   ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                 ;             ;
-; db/altsyncram_r6d1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf                                             ;             ;
-; db/altsyncram_kve2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_kve2.tdf                                             ;             ;
-; InstMIF.mif                                                        ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif                                                        ;             ;
+; db/altsyncram_gdb1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_gdb1.tdf                                             ;             ;
+; db/altsyncram_13k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf                                             ;             ;
+; db/altsyncram_ala2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_ala2.tdf                                             ;             ;
 ; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                          ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                ;             ;
 ; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                            ;             ;
 ; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                               ;             ;
-; db/altsyncram_2bi1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf                                             ;             ;
 ; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                  ; altera_sld  ;
 ; db/ip/sld128f4b33/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/alt_sld_fab.v                                    ; alt_sld_fab ;
 ; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
@@ -234,41 +243,40 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                             ;             ;
-; db/altsyncram_lpk1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_lpk1.tdf                                             ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 247                      ;
-;                                             ;                          ;
-; Total combinational functions               ; 216                      ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 79                       ;
-;     -- 3 input functions                    ; 72                       ;
-;     -- <=2 input functions                  ; 65                       ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 188                      ;
-;     -- arithmetic mode                      ; 28                       ;
-;                                             ;                          ;
-; Total registers                             ; 154                      ;
-;     -- Dedicated logic registers            ; 154                      ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 18                       ;
-; Total memory bits                           ; 131072                   ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 210                      ;
-; Total fan-out                               ; 1750                     ;
-; Average fan-out                             ; 3.91                     ;
-+---------------------------------------------+--------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 3,491     ;
+;                                             ;           ;
+; Total combinational functions               ; 2500      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1909      ;
+;     -- 3 input functions                    ; 492       ;
+;     -- <=2 input functions                  ; 99        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2350      ;
+;     -- arithmetic mode                      ; 150       ;
+;                                             ;           ;
+; Total registers                             ; 1160      ;
+;     -- Dedicated logic registers            ; 1160      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 18        ;
+; Total memory bits                           ; 163840    ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1072      ;
+; Total fan-out                               ; 15137     ;
+; Average fan-out                             ; 4.02      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -276,13 +284,26 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                      ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |single_cycle                                                                                                                           ; 216 (1)             ; 154 (0)                   ; 131072      ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |single_cycle                                                                                                                                                                                                                                                                                                                                            ; single_cycle                      ; work         ;
-;    |InstMem:IM|                                                                                                                         ; 95 (0)              ; 68 (0)                    ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM                                                                                                                                                                                                                                                                                                                                 ; InstMem                           ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 95 (0)              ; 68 (0)                    ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
-;          |altsyncram_r6d1:auto_generated|                                                                                               ; 95 (0)              ; 68 (0)                    ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_r6d1                   ; work         ;
-;             |altsyncram_kve2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|altsyncram_kve2:altsyncram1                                                                                                                                                                                                                                      ; altsyncram_kve2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 95 (74)             ; 68 (59)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
-;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 21 (21)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
+; |single_cycle                                                                                                                           ; 2500 (6)            ; 1160 (0)                  ; 163840      ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |single_cycle                                                                                                                                                                                                                                                                                                                                            ; single_cycle                      ; work         ;
+;    |ALU:Alu|                                                                                                                            ; 661 (661)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ALU:Alu                                                                                                                                                                                                                                                                                                                                    ; ALU                               ; work         ;
+;    |Adder:PCAdder|                                                                                                                      ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|Adder:PCAdder                                                                                                                                                                                                                                                                                                                              ; Adder                             ; work         ;
+;    |Adder:branchAdder_|                                                                                                                 ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|Adder:branchAdder_                                                                                                                                                                                                                                                                                                                         ; Adder                             ; work         ;
+;    |ControlUnit:CU|                                                                                                                     ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ControlUnit:CU                                                                                                                                                                                                                                                                                                                             ; ControlUnit                       ; work         ;
+;    |DataMem:DM_|                                                                                                                        ; 92 (0)              ; 66 (0)                    ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_                                                                                                                                                                                                                                                                                                                                ; DataMem                           ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 92 (0)              ; 66 (0)                    ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                ; altsyncram                        ; work         ;
+;          |altsyncram_13k1:auto_generated|                                                                                               ; 92 (0)              ; 66 (0)                    ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated                                                                                                                                                                                                                                                                 ; altsyncram_13k1                   ; work         ;
+;             |altsyncram_ala2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1                                                                                                                                                                                                                                     ; altsyncram_ala2                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 92 (72)             ; 66 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                                       ; sld_mod_ram_rom                   ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 20 (20)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                    ; sld_rom_sr                        ; work         ;
+;    |InstMem:IM|                                                                                                                         ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM                                                                                                                                                                                                                                                                                                                                 ; InstMem                           ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
+;          |altsyncram_gdb1:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_gdb1                   ; work         ;
+;    |ProgramCounter:pc|                                                                                                                  ; 16 (16)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ProgramCounter:pc                                                                                                                                                                                                                                                                                                                          ; ProgramCounter                    ; work         ;
+;    |RegisterFile:RF|                                                                                                                    ; 1046 (1046)         ; 992 (992)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|RegisterFile:RF                                                                                                                                                                                                                                                                                                                            ; RegisterFile                      ; work         ;
+;    |mux2x1:ALUMux1_|                                                                                                                    ; 373 (373)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:ALUMux1_                                                                                                                                                                                                                                                                                                                            ; mux2x1                            ; work         ;
+;    |mux2x1:ALUMux2_|                                                                                                                    ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:ALUMux2_                                                                                                                                                                                                                                                                                                                            ; mux2x1                            ; work         ;
+;    |mux2x1:RFMux_|                                                                                                                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:RFMux_                                                                                                                                                                                                                                                                                                                              ; mux2x1                            ; work         ;
+;    |mux2x1:WBMux2_|                                                                                                                     ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:WBMux2_                                                                                                                                                                                                                                                                                                                             ; mux2x1                            ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 120 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -295,13 +316,14 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                            ;
-+------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
-; Name                                                                                                             ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF         ;
-+------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
-; InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|altsyncram_kve2:altsyncram1|ALTSYNCRAM ; M9K  ; True Dual Port ; 4096         ; 32           ; 4096         ; 32           ; 131072 ; InstMIF.mif ;
-+------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
+; Name                                                                                                              ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF         ;
++-------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
+; DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1|ALTSYNCRAM ; M9K  ; True Dual Port ; 1024         ; 32           ; 1024         ; 32           ; 32768  ; None        ;
+; InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated|ALTSYNCRAM                              ; M9K  ; ROM            ; 4096         ; 32           ; --           ; --           ; 131072 ; InstMIF.mif ;
++-------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -319,1038 +341,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+------------------------------------------+----------------------------------------+
-; Register name                            ; Reason for Removal                     ;
-+------------------------------------------+----------------------------------------+
-; ProgramCounter:pc|PCout[0..15]           ; Stuck at GND due to stuck port data_in ;
-; RegisterFile:RF|registers[31][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[0][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[1][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[2][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[3][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[4][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[5][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[6][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[7][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[8][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][31]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][30]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][29]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][28]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][27]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][26]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][25]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][24]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][23]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][22]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][21]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][20]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][19]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][18]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][17]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][16]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][15]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][14]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][13]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][12]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][11]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][10]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][9]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][8]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][7]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][6]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][5]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][4]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][3]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][2]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][1]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[9][0]          ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[10][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[11][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[12][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[13][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[14][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[15][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[16][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[17][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[18][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[19][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[20][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[21][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[22][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[23][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[24][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[25][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[26][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[27][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[28][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[29][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][1]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[30][0]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][31]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][30]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][29]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][28]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][27]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][26]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][25]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][24]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][23]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][22]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][21]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][20]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][19]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][18]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][17]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][16]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][15]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][14]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][13]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][12]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][11]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][10]        ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][9]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][8]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][7]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][6]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][5]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][4]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][3]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][2]         ; Lost fanout                            ;
-; RegisterFile:RF|registers[31][1]         ; Lost fanout                            ;
-; Total Number of Removed Registers = 1040 ;                                        ;
-+------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; RegisterFile:RF|registers[0][0]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][1]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][2]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][3]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][4]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][5]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][6]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][7]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][8]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][9]        ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][10]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][11]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][12]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][13]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][14]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][15]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][16]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][17]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][18]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][19]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][20]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][21]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][22]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][23]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][24]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][25]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][26]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][27]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][28]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][29]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][30]       ; Stuck at GND due to stuck port clock_enable ;
+; RegisterFile:RF|registers[0][31]       ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1358,12 +387,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 154   ;
+; Total registers                              ; 1160  ;
 ; Number of registers using Synchronous Clear  ; 17    ;
-; Number of registers using Synchronous Load   ; 22    ;
-; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 1050  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 118   ;
+; Number of registers using Clock Enable       ; 1108  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1379,35 +408,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[18]                                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux4x1:PCMux_|out[4]                                                                                                                                                    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:WBMux2_|out[27]                                                                                                                                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:WBMux2_|out[1]                                                                                                                                                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:RFMux_|out[0]                                                                                                                                                    ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux24                                                                                                                                                   ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux58                                                                                                                                                   ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; No         ; |single_cycle|ControlUnit:CU|Selector3                                                                                                                                                ;
+; 33:1               ; 16 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |single_cycle|mux2x1:ALUMux1_|out[17]                                                                                                                                                 ;
+; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux15                                                                                                                                                           ;
+; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux22                                                                                                                                                           ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux7                                                                                                                                                            ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux24                                                                                                                                                           ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 16 LEs               ; 14 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux3                                                                                                                                                            ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 16 LEs               ; 14 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux28                                                                                                                                                           ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux0                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|altsyncram_kve2:altsyncram1 ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                             ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Source assignments for InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------+
+; Assignment                      ; Value              ; From ; To                                 ;
++---------------------------------+--------------------+------+------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
++---------------------------------+--------------------+------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Source assignments for DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------+
-; Assignment                      ; Value              ; From ; To                                  ;
-+---------------------------------+--------------------+------+-------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
-+---------------------------------+--------------------+------+-------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1 ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -1476,7 +520,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                     ;
-; CBXI_PARAMETER                     ; altsyncram_r6d1      ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_gdb1      ; Untyped                     ;
 +------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1640,7 +684,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                    ;
 ; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                    ;
 ; DEVICE_FAMILY                      ; MAX 10                 ; Untyped                    ;
-; CBXI_PARAMETER                     ; altsyncram_2bi1        ; Untyped                    ;
+; CBXI_PARAMETER                     ; altsyncram_13k1        ; Untyped                    ;
 +------------------------------------+------------------------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1733,6 +777,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:CU"                                                                            ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; InvalidInst ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "InstMem:IM"                                                                                                                                                                          ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1752,13 +805,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; In-System Memory Content Editor Settings                                                                                              ;
-+----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
-; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                        ;
-+----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
-; 0              ; 0001        ; 32    ; 4096  ; Read/Write ; InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated ;
-+----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
++-----------------------------------------------+
+; Port Connectivity Checks: "ProgramCounter:pc" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; PCEn ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                               ;
++----------------+-------------+-------+-------+------------+----------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                         ;
++----------------+-------------+-------+-------+------------+----------------------------------------------------------------------------+
+; 0              ; d1          ; 32    ; 1024  ; Read/Write ; DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated ;
++----------------+-------------+-------+-------+------------+----------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1767,25 +829,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 45                          ;
-; cycloneiii_ff         ; 68                          ;
+; cycloneiii_ff         ; 1074                        ;
 ;     CLR               ; 8                           ;
 ;     ENA               ; 36                          ;
-;     ENA CLR           ; 7                           ;
-;     ENA CLR SLD       ; 12                          ;
+;     ENA CLR           ; 999                         ;
+;     ENA CLR SLD       ; 10                          ;
 ;     ENA SCLR          ; 5                           ;
-; cycloneiii_lcell_comb ; 96                          ;
-;     arith             ; 20                          ;
-;         2 data inputs ; 20                          ;
-;     normal            ; 76                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 29                          ;
-; cycloneiii_ram_block  ; 32                          ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 2379                        ;
+;     arith             ; 142                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 109                         ;
+;     normal            ; 2237                        ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 353                         ;
+;         4 data inputs ; 1855                        ;
+; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.99                        ;
+; Max LUT depth         ; 21.00                       ;
+; Average LUT depth     ; 17.26                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1794,7 +857,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1804,7 +867,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 07 10:18:04 2024
+    Info: Processing started: Thu Nov 07 11:04:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1833,7 +896,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file datamem
 Info (12021): Found 1 design units, including 1 entities, in source file singe_cycle_tb1.v
     Info (12023): Found entity 1: test_single_cycle File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/singe_cycle_tb1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file single_cycle_tb1.v
-    Info (12023): Found entity 1: single_cycle_tb1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 1
+    Info (12023): Found entity 1: single_cycle_tb1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 3
 Info (12127): Elaborating entity "single_cycle" for the top level hierarchy
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 56
 Info (12128): Elaborating entity "Adder" for hierarchy "Adder:PCAdder" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 63
@@ -1846,7 +909,7 @@ Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_compon
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "InstMIF.mif"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=0001"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
     Info (12134): Parameter "numwords_a" = "4096"
     Info (12134): Parameter "operation_mode" = "ROM"
@@ -1856,38 +919,10 @@ Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_compon
     Info (12134): Parameter "widthad_a" = "12"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r6d1.tdf
-    Info (12023): Found entity 1: altsyncram_r6d1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_r6d1" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kve2.tdf
-    Info (12023): Found entity 1: altsyncram_kve2 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_kve2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_kve2" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|altsyncram_kve2:altsyncram1" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf Line: 35
-Warning (113028): 192 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif Line: 1
-    Warning (113027): Addresses ranging from 64 to 255 are not initialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif Line: 1
-Warning (113031): 8 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 8 warnings found, and 8 warnings are reported. File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif Line: 1
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 14
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 15
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 16
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 17
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 18
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 19
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 20
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ Line: 21
-Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (256) in the Memory Initialization File "C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf Line: 36
-Info (12130): Elaborated megafunction instantiation "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf Line: 36
-Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_r6d1.tdf Line: 36
-    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
-    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
-    Info (12134): Parameter "IS_READABLE" = "1"
-    Info (12134): Parameter "NODE_NAME" = "808464433"
-    Info (12134): Parameter "NUMWORDS" = "4096"
-    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
-    Info (12134): Parameter "WIDTH_WORD" = "32"
-    Info (12134): Parameter "WIDTHAD" = "12"
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_r6d1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gdb1.tdf
+    Info (12023): Found entity 1: altsyncram_gdb1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_gdb1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_gdb1" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2048) in the Memory Initialization File "C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 92
 Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(208): case item expression covers a value already covered by a previous case item File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 208
 Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(37): inferring latch(es) for variable "InvalidInst", which holds its previous value in one or more paths through the always construct File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 37
@@ -1904,7 +939,7 @@ Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_compo
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=d1"
     Info (12134): Parameter "lpm_type" = "altsyncram"
     Info (12134): Parameter "numwords_a" = "1024"
     Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
@@ -1916,12 +951,29 @@ Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_compo
     Info (12134): Parameter "widthad_a" = "10"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2bi1.tdf
-    Info (12023): Found entity 1: altsyncram_2bi1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_2bi1" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_13k1.tdf
+    Info (12023): Found entity 1: altsyncram_13k1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_13k1" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ala2.tdf
+    Info (12023): Found entity 1: altsyncram_ala2 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_ala2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ala2" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 38
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
+Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
+    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1680932864"
+    Info (12134): Parameter "NUMWORDS" = "1024"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
+    Info (12134): Parameter "WIDTH_WORD" = "32"
+    Info (12134): Parameter "WIDTHAD" = "10"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:PCMux_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 217
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.07.09:18:20 Progress: Loading sld128f4b33/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.07.10:04:20 Progress: Loading sld128f4b33/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1944,75 +996,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[0]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 38
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[1]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 60
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[2]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 82
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[3]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 104
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[4]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 126
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[5]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 148
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[6]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 170
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[7]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 192
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[8]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 214
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[9]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 236
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[10]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 258
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[11]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 280
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[12]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 302
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[13]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 324
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[14]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 346
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[15]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 368
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[16]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 390
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[17]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 412
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[18]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 434
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[19]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 456
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[20]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 478
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[21]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 500
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[22]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 522
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[23]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 544
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[24]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 566
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[25]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 588
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[26]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 610
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[27]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 632
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[28]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 654
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[29]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 676
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[30]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 698
-        Warning (14320): Synthesized away node "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_2bi1:auto_generated|q_a[31]" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_2bi1.tdf Line: 720
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PC[0]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[1]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[2]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[3]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[4]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[5]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[6]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[7]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[8]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[9]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[10]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[11]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[12]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[13]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[14]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
-    Warning (13410): Pin "PC[15]" is stuck at GND File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 1024 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rst" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 6
-Info (21057): Implemented 306 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3614 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 251 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Thu Nov 07 10:18:32 2024
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (21061): Implemented 3527 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4880 megabytes
+    Info: Processing ended: Thu Nov 07 11:04:38 2024
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +------------------------------------------+
