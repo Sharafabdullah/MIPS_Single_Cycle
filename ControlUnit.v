@@ -1,41 +1,48 @@
-module ControlUnit(OpCode,
-                   Funct,
-                   RegDst,
-                   BranchEq,
-                   BranchNeq,
-                   InvalidInst,
-                   Jump,
-                   JumpReg,
-                   MemRdEn,
-                   MemtoReg,
-                   ALUOp,
-                   MemWrEn,
-                   RegWrEn,
-                   ALUSrc1,
-                   ALUSrc2);
+module ControlUnit(                                            
+ OpCode,
+ Funct,
+ RegDst,
+ BranchEq,
+ BranchNeq,
+ InvalidInst,
+ Jump,
+ JumpReg,
+ MemRdEn,
+ MemtoReg,
+ ALUOp,
+ MemWrEn,
+ RegWrEn,
+ ALUSrc1,
+ ALUSrc2);
     
     
     // inputs
     input wire [5:0] OpCode, Funct;
     
     // outputs (signals)
-    output reg RegDst, BranchEq,BranchNeq,InvalidInst,Jump,JumpReg, MemRdEn, MemtoReg, MemWrEn, RegWrEn, ALUSrc2, ALUSrc1;
+    output reg RegDst, BranchEq,BranchNeq,InvalidInst,Jump,JumpReg,
+	 MemRdEn, MemtoReg, MemWrEn, RegWrEn, ALUSrc2, ALUSrc1;
 
     output reg [3:0] ALUOp; //changed to 4 bits
     
     //! parameters (OpCodes/Functs) added opcodes and funct
     parameter _RType = 6'h0, _addi = 6'h8, _ori = 6'h0D, _xori = 6'h0E,_andi = 6'h0C,
     _slti = 6'h0A, _lw = 6'h23, _sw = 6'h2b,
-    _beq = 6'h4,_bnq = 6'h5, _j = 6'h02, _jr = 6'h8, _jal = 6'h3;
+    _beq = 6'h4,_bnq = 6'h5, _j = 6'h02, _jr = 6'h8, _jal = 6'h3;                         
     
-    parameter _add_ = 6'h20, _sub_ = 6'h22, _and_ = 6'h24, _or_ = 6'h25, _slt_ = 6'h2a,_sgt_ = 6'h29, _xor_ = 6'h26, _nor_ = 6'h27, _sll_ = 6'h00, _srl_ = 6'h02;
+    parameter _add_ = 6'h20, _sub_ = 6'h22, _and_ = 6'h24, _or_ = 6'h25,
+	 _slt_ = 6'h2a,_sgt_ = 6'h29, _xor_ = 6'h26, _nor_ = 6'h27, _sll_ = 6'h00,         
+	 _srl_ = 6'h02;
     
     
     // unit logic - generate signals
     always @(*) begin
         
-        RegDst  = 1'b0; BranchEq  = 1'b0; BranchNeq = 1'b0; MemRdEn  = 1'b0; MemtoReg  = 1'b0; Jump = 1'b0; JumpReg = 1'b0;
+        RegDst  = 1'b0; BranchEq  = 1'b0; BranchNeq = 1'b0; MemRdEn  = 1'b0;
+		  MemtoReg  = 1'b0; Jump = 1'b0; JumpReg = 1'b0;
         
+		  InvalidInst = 0'b0;
+		  
         MemWrEn = 1'b0; RegWrEn = 1'b0;ALUSrc1 = 1'b0; ALUSrc2 = 1'b0;
         ALUOp   = 4'b1111;
         
@@ -68,14 +75,14 @@ module ControlUnit(OpCode,
                     end
                     
                     _or_ : begin
-                        ALUOp = 4'b0011; //was d
+                        ALUOp = 4'b0011; 
                     end
                     
                     _slt_ : begin
                         ALUOp = 4'b0100;
                     end
                     _sgt_ : begin
-                        ALUOp = 4'b1001; //! Notice that It is 1001
+                        ALUOp = 4'b1001; 
                     end
                     
                     //! Added R_type

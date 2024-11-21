@@ -5,19 +5,19 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v}
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main {C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  single_cycle_tb1
 

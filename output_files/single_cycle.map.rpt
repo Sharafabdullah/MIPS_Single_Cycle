@@ -1,5 +1,5 @@
 Analysis & Synthesis report for single_cycle
-Thu Nov 07 11:04:38 2024
+Tue Nov 19 20:55:17 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -24,20 +24,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  16. Parameter Settings for User Entity Instance: Adder:PCAdder
  17. Parameter Settings for User Entity Instance: InstMem:IM|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: ControlUnit:CU
- 19. Parameter Settings for User Entity Instance: mux2x1:RFInter_
- 20. Parameter Settings for User Entity Instance: mux2x1:RFMux_
- 21. Parameter Settings for User Entity Instance: mux2x1:ALUMux1_
- 22. Parameter Settings for User Entity Instance: mux2x1:ALUMux2_
+ 19. Parameter Settings for User Entity Instance: mux2X1:RFInter_
+ 20. Parameter Settings for User Entity Instance: mux2X1:RFMux_
+ 21. Parameter Settings for User Entity Instance: mux2X1:ALUMux1_
+ 22. Parameter Settings for User Entity Instance: mux2X1:ALUMux2_
  23. Parameter Settings for User Entity Instance: ALU:Alu
  24. Parameter Settings for User Entity Instance: Adder:branchAdder_
  25. Parameter Settings for User Entity Instance: DataMem:DM_|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: mux2x1:WBMux1_
- 27. Parameter Settings for User Entity Instance: mux2x1:WBMux2_
+ 26. Parameter Settings for User Entity Instance: mux2X1:WBMux1_
+ 27. Parameter Settings for User Entity Instance: mux2X1:WBMux2_
  28. Parameter Settings for User Entity Instance: mux4x1:PCMux_
  29. altsyncram Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "mux2x1:WBMux2_"
- 31. Port Connectivity Checks: "mux2x1:ALUMux1_"
- 32. Port Connectivity Checks: "mux2x1:RFMux_"
+ 30. Port Connectivity Checks: "mux2X1:WBMux2_"
+ 31. Port Connectivity Checks: "mux2X1:ALUMux1_"
+ 32. Port Connectivity Checks: "mux2X1:RFMux_"
  33. Port Connectivity Checks: "ControlUnit:CU"
  34. Port Connectivity Checks: "InstMem:IM"
  35. Port Connectivity Checks: "Adder:PCAdder"
@@ -73,13 +73,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 07 11:04:38 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 19 20:55:17 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; single_cycle                                ;
 ; Top-level Entity Name              ; single_cycle                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,491                                       ;
-;     Total combinational functions  ; 2,500                                       ;
+; Total logic elements               ; 3,502                                       ;
+;     Total combinational functions  ; 2,511                                       ;
 ;     Dedicated logic registers      ; 1,160                                       ;
 ; Total registers                    ; 1160                                        ;
 ; Total pins                         ; 18                                          ;
@@ -183,67 +183,62 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                  ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                        ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; InstMIF.mif                                                        ; yes             ; User Memory Initialization File              ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif                                                        ;             ;
-; Adder.v                                                            ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v                                                            ;             ;
-; ProgramCounter.v                                                   ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v                                                   ;             ;
-; single_cycle.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v                                                     ;             ;
-; InstMem.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v                                                          ;             ;
-; ControlUnit.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v                                                      ;             ;
-; mux2X1.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v                                                           ;             ;
-; RegisterFile.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v                                                     ;             ;
-; SignExtender.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v                                                     ;             ;
-; mux4x1.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v                                                           ;             ;
-; ALU.v                                                              ; yes             ; User Verilog HDL File                        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v                                                              ;             ;
-; DataMem.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v                                                          ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                               ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                        ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                  ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                               ;             ;
-; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                               ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                   ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                   ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                 ;             ;
-; db/altsyncram_gdb1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_gdb1.tdf                                             ;             ;
-; db/altsyncram_13k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf                                             ;             ;
-; db/altsyncram_ala2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_ala2.tdf                                             ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                          ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                            ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                               ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                  ; altera_sld  ;
-; db/ip/sld128f4b33/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                             ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                              ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                    ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
+; InstMIF.mif                                                        ; yes             ; User Memory Initialization File              ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMIF.mif                                                        ;             ;
+; Adder.v                                                            ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v                                                            ;             ;
+; ProgramCounter.v                                                   ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v                                                   ;             ;
+; single_cycle.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v                                                     ;             ;
+; InstMem.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v                                                          ;             ;
+; ControlUnit.v                                                      ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v                                                      ;             ;
+; mux2X1.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v                                                           ;             ;
+; RegisterFile.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v                                                     ;             ;
+; SignExtender.v                                                     ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v                                                     ;             ;
+; mux4x1.v                                                           ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v                                                           ;             ;
+; ALU.v                                                              ; yes             ; User Verilog HDL File                        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v                                                              ;             ;
+; DataMem.v                                                          ; yes             ; User Wizard-Generated File                   ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v                                                          ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                           ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                    ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                              ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                           ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                           ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                            ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                               ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                               ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                             ;             ;
+; db/altsyncram_gdb1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_gdb1.tdf                                             ;             ;
+; db/altsyncram_13k1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf                                             ;             ;
+; db/altsyncram_ala2.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_ala2.tdf                                             ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                      ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                            ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                        ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                           ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                              ; altera_sld  ;
+; db/ip/sld128f4b33/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                         ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +---------------------------------------------------------+
@@ -251,16 +246,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,491     ;
+; Estimated Total logic elements              ; 3,502     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2500      ;
+; Total combinational functions               ; 2511      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1909      ;
-;     -- 3 input functions                    ; 492       ;
+;     -- 4 input functions                    ; 1964      ;
+;     -- 3 input functions                    ; 448       ;
 ;     -- <=2 input functions                  ; 99        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2350      ;
+;     -- normal mode                          ; 2361      ;
 ;     -- arithmetic mode                      ; 150       ;
 ;                                             ;           ;
 ; Total registers                             ; 1160      ;
@@ -274,8 +269,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1072      ;
-; Total fan-out                               ; 15137     ;
-; Average fan-out                             ; 4.02      ;
+; Total fan-out                               ; 15225     ;
+; Average fan-out                             ; 4.03      ;
 +---------------------------------------------+-----------+
 
 
@@ -284,10 +279,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                      ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |single_cycle                                                                                                                           ; 2500 (6)            ; 1160 (0)                  ; 163840      ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |single_cycle                                                                                                                                                                                                                                                                                                                                            ; single_cycle                      ; work         ;
-;    |ALU:Alu|                                                                                                                            ; 661 (661)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ALU:Alu                                                                                                                                                                                                                                                                                                                                    ; ALU                               ; work         ;
+; |single_cycle                                                                                                                           ; 2511 (5)            ; 1160 (0)                  ; 163840      ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |single_cycle                                                                                                                                                                                                                                                                                                                                            ; single_cycle                      ; work         ;
+;    |ALU:Alu|                                                                                                                            ; 699 (699)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ALU:Alu                                                                                                                                                                                                                                                                                                                                    ; ALU                               ; work         ;
 ;    |Adder:PCAdder|                                                                                                                      ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|Adder:PCAdder                                                                                                                                                                                                                                                                                                                              ; Adder                             ; work         ;
-;    |Adder:branchAdder_|                                                                                                                 ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|Adder:branchAdder_                                                                                                                                                                                                                                                                                                                         ; Adder                             ; work         ;
+;    |Adder:branchAdder_|                                                                                                                 ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|Adder:branchAdder_                                                                                                                                                                                                                                                                                                                         ; Adder                             ; work         ;
 ;    |ControlUnit:CU|                                                                                                                     ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ControlUnit:CU                                                                                                                                                                                                                                                                                                                             ; ControlUnit                       ; work         ;
 ;    |DataMem:DM_|                                                                                                                        ; 92 (0)              ; 66 (0)                    ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_                                                                                                                                                                                                                                                                                                                                ; DataMem                           ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 92 (0)              ; 66 (0)                    ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                ; altsyncram                        ; work         ;
@@ -298,12 +293,12 @@ https://fpgasoftware.intel.com/eula.
 ;    |InstMem:IM|                                                                                                                         ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM                                                                                                                                                                                                                                                                                                                                 ; InstMem                           ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
 ;          |altsyncram_gdb1:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 131072      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated                                                                                                                                                                                                                                                                  ; altsyncram_gdb1                   ; work         ;
-;    |ProgramCounter:pc|                                                                                                                  ; 16 (16)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ProgramCounter:pc                                                                                                                                                                                                                                                                                                                          ; ProgramCounter                    ; work         ;
-;    |RegisterFile:RF|                                                                                                                    ; 1046 (1046)         ; 992 (992)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|RegisterFile:RF                                                                                                                                                                                                                                                                                                                            ; RegisterFile                      ; work         ;
-;    |mux2x1:ALUMux1_|                                                                                                                    ; 373 (373)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:ALUMux1_                                                                                                                                                                                                                                                                                                                            ; mux2x1                            ; work         ;
-;    |mux2x1:ALUMux2_|                                                                                                                    ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:ALUMux2_                                                                                                                                                                                                                                                                                                                            ; mux2x1                            ; work         ;
-;    |mux2x1:RFMux_|                                                                                                                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:RFMux_                                                                                                                                                                                                                                                                                                                              ; mux2x1                            ; work         ;
-;    |mux2x1:WBMux2_|                                                                                                                     ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2x1:WBMux2_                                                                                                                                                                                                                                                                                                                             ; mux2x1                            ; work         ;
+;    |ProgramCounter:pc|                                                                                                                  ; 21 (21)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|ProgramCounter:pc                                                                                                                                                                                                                                                                                                                          ; ProgramCounter                    ; work         ;
+;    |RegisterFile:RF|                                                                                                                    ; 1032 (1032)         ; 992 (992)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|RegisterFile:RF                                                                                                                                                                                                                                                                                                                            ; RegisterFile                      ; work         ;
+;    |mux2X1:ALUMux1_|                                                                                                                    ; 359 (359)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2X1:ALUMux1_                                                                                                                                                                                                                                                                                                                            ; mux2X1                            ; work         ;
+;    |mux2X1:ALUMux2_|                                                                                                                    ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2X1:ALUMux2_                                                                                                                                                                                                                                                                                                                            ; mux2X1                            ; work         ;
+;    |mux2X1:RFMux_|                                                                                                                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2X1:RFMux_                                                                                                                                                                                                                                                                                                                              ; mux2X1                            ; work         ;
+;    |mux2X1:WBMux2_|                                                                                                                     ; 53 (53)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|mux2X1:WBMux2_                                                                                                                                                                                                                                                                                                                             ; mux2X1                            ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 120 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 119 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |single_cycle|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -418,17 +413,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 26:1               ; 4 bits    ; 68 LEs        ; 40 LEs               ; 28 LEs                 ; Yes        ; |single_cycle|DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux4x1:PCMux_|out[4]                                                                                                                                                    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:WBMux2_|out[27]                                                                                                                                                  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:WBMux2_|out[1]                                                                                                                                                   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2x1:RFMux_|out[0]                                                                                                                                                    ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux24                                                                                                                                                   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux58                                                                                                                                                   ;
-; 64:1               ; 4 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; No         ; |single_cycle|ControlUnit:CU|Selector3                                                                                                                                                ;
-; 33:1               ; 16 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |single_cycle|mux2x1:ALUMux1_|out[17]                                                                                                                                                 ;
-; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux15                                                                                                                                                           ;
-; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux22                                                                                                                                                           ;
-; 22:1               ; 4 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux7                                                                                                                                                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux4x1:PCMux_|out[11]                                                                                                                                                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2X1:WBMux2_|out[24]                                                                                                                                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2X1:WBMux2_|out[0]                                                                                                                                                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |single_cycle|mux2X1:RFMux_|out[2]                                                                                                                                                    ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux19                                                                                                                                                   ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |single_cycle|RegisterFile:RF|Mux62                                                                                                                                                   ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; No         ; |single_cycle|ControlUnit:CU|Selector2                                                                                                                                                ;
+; 33:1               ; 16 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |single_cycle|mux2X1:ALUMux1_|out[17]                                                                                                                                                 ;
+; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux14                                                                                                                                                           ;
+; 21:1               ; 8 bits    ; 112 LEs       ; 48 LEs               ; 64 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux17                                                                                                                                                           ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux5                                                                                                                                                            ;
 ; 22:1               ; 4 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux24                                                                                                                                                           ;
 ; 23:1               ; 2 bits    ; 30 LEs        ; 16 LEs               ; 14 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux3                                                                                                                                                            ;
 ; 23:1               ; 2 bits    ; 30 LEs        ; 16 LEs               ; 14 LEs                 ; No         ; |single_cycle|ALU:Alu|Mux28                                                                                                                                                           ;
@@ -558,7 +553,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:RFInter_ ;
+; Parameter Settings for User Entity Instance: mux2X1:RFInter_ ;
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
@@ -568,7 +563,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:RFMux_ ;
+; Parameter Settings for User Entity Instance: mux2X1:RFMux_ ;
 +----------------+-------+-----------------------------------+
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
@@ -578,7 +573,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:ALUMux1_ ;
+; Parameter Settings for User Entity Instance: mux2X1:ALUMux1_ ;
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
@@ -588,7 +583,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:ALUMux2_ ;
+; Parameter Settings for User Entity Instance: mux2X1:ALUMux2_ ;
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
@@ -690,7 +685,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:WBMux1_ ;
+; Parameter Settings for User Entity Instance: mux2X1:WBMux1_ ;
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
@@ -700,7 +695,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux2x1:WBMux2_ ;
+; Parameter Settings for User Entity Instance: mux2X1:WBMux2_ ;
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
@@ -751,7 +746,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2x1:WBMux2_"                                                                                                                                ;
+; Port Connectivity Checks: "mux2X1:WBMux2_"                                                                                                                                ;
 +------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                         ;
 +------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -759,17 +754,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2x1:ALUMux1_"                                                                                                                             ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                       ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; in2  ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in2[31..5]" will be connected to GND. ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------+
+; Port Connectivity Checks: "mux2X1:ALUMux1_"  ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; in2[31..5] ; Input ; Info     ; Stuck at GND ;
++------------+-------+----------+--------------+
 
 
 +-------------------------------------------+
-; Port Connectivity Checks: "mux2x1:RFMux_" ;
+; Port Connectivity Checks: "mux2X1:RFMux_" ;
 +------+-------+----------+-----------------+
 ; Port ; Type  ; Severity ; Details         ;
 +------+-------+----------+-----------------+
@@ -836,19 +831,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 10                          ;
 ;     ENA SCLR          ; 5                           ;
 ;     plain             ; 16                          ;
-; cycloneiii_lcell_comb ; 2379                        ;
+; cycloneiii_lcell_comb ; 2390                        ;
 ;     arith             ; 142                         ;
 ;         2 data inputs ; 33                          ;
 ;         3 data inputs ; 109                         ;
-;     normal            ; 2237                        ;
+;     normal            ; 2248                        ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 25                          ;
-;         3 data inputs ; 353                         ;
-;         4 data inputs ; 1855                        ;
+;         3 data inputs ; 309                         ;
+;         4 data inputs ; 1910                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 21.00                       ;
-; Average LUT depth     ; 17.26                       ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 17.72                       ;
 +-----------------------+-----------------------------+
 
 
@@ -857,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -867,43 +862,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 07 11:04:05 2024
+    Info: Processing started: Tue Nov 19 20:54:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cycle -c single_cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: Adder File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v Line: 2
+    Info (12023): Found entity 1: Adder File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
-    Info (12023): Found entity 1: ProgramCounter File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v Line: 1
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file single_cycle.v
-    Info (12023): Found entity 1: single_cycle File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 1
+    Info (12023): Found entity 1: single_cycle File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instmem.v
-    Info (12023): Found entity 1: InstMem File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 40
+    Info (12023): Found entity 1: InstMem File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
-    Info (12023): Found entity 1: ControlUnit File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 1
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2x1.v
-    Info (12023): Found entity 1: mux2x1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v Line: 1
+    Info (12023): Found entity 1: mux2X1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v Line: 1
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file signextender.v
-    Info (12023): Found entity 1: SignExtender File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v Line: 1
+    Info (12023): Found entity 1: SignExtender File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
-    Info (12023): Found entity 1: mux4x1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v Line: 1
+    Info (12023): Found entity 1: mux4x1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datamem.v
-    Info (12023): Found entity 1: DataMem File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v Line: 40
+    Info (12023): Found entity 1: DataMem File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file singe_cycle_tb1.v
-    Info (12023): Found entity 1: test_single_cycle File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/singe_cycle_tb1.v Line: 1
+    Info (12023): Found entity 1: singe_cycle_tb1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/singe_cycle_tb1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file single_cycle_tb1.v
-    Info (12023): Found entity 1: single_cycle_tb1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 3
+    Info (12023): Found entity 1: single_cycle_tb1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
+    Info (12023): Found entity 1: ALU_tb File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU_tb.v Line: 3
+Warning (10229): Verilog HDL Expression warning at CU_tb.v(73): truncated literal to match 6 bits File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/CU_tb.v Line: 73
+Info (12021): Found 1 design units, including 1 entities, in source file cu_tb.v
+    Info (12023): Found entity 1: CU_tb File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/CU_tb.v Line: 3
 Info (12127): Elaborating entity "single_cycle" for the top level hierarchy
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 56
-Info (12128): Elaborating entity "Adder" for hierarchy "Adder:PCAdder" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 63
-Info (12128): Elaborating entity "InstMem" for hierarchy "InstMem:IM" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 73
-Info (12128): Elaborating entity "altsyncram" for hierarchy "InstMem:IM|altsyncram:altsyncram_component" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
-Info (12130): Elaborated megafunction instantiation "InstMem:IM|altsyncram:altsyncram_component" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
-Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 56
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:PCAdder" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 63
+Info (12128): Elaborating entity "InstMem" for hierarchy "InstMem:IM" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 73
+Info (12128): Elaborating entity "altsyncram" for hierarchy "InstMem:IM|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v Line: 82
+Info (12130): Elaborated megafunction instantiation "InstMem:IM|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v Line: 82
+Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -920,22 +920,22 @@ Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gdb1.tdf
-    Info (12023): Found entity 1: altsyncram_gdb1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_gdb1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_gdb1" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2048) in the Memory Initialization File "C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMIF.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v Line: 82
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 92
-Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(208): case item expression covers a value already covered by a previous case item File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 208
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(37): inferring latch(es) for variable "InvalidInst", which holds its previous value in one or more paths through the always construct File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 37
-Info (10041): Inferred latch for "InvalidInst" at ControlUnit.v(37) File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v Line: 37
-Info (12128): Elaborating entity "mux2x1" for hierarchy "mux2x1:RFInter_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 100
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 122
-Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:SignExtend_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 127
-Info (12128): Elaborating entity "mux2x1" for hierarchy "mux2x1:ALUMux1_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 135
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:Alu" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 150
-Info (12128): Elaborating entity "DataMem" for hierarchy "DataMem:DM_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 192
-Info (12128): Elaborating entity "altsyncram" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v Line: 89
-Info (12130): Elaborated megafunction instantiation "DataMem:DM_|altsyncram:altsyncram_component" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v Line: 89
-Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v Line: 89
+    Info (12023): Found entity 1: altsyncram_gdb1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_gdb1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_gdb1" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_gdb1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (4096) in the design file differs from memory depth (2048) in the Memory Initialization File "C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMIF.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v Line: 82
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 92
+Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(213): case item expression covers a value already covered by a previous case item File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v Line: 213
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(41): inferring latch(es) for variable "InvalidInst", which holds its previous value in one or more paths through the always construct File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v Line: 41
+Info (10041): Inferred latch for "InvalidInst" at ControlUnit.v(41) File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v Line: 41
+Info (12128): Elaborating entity "mux2X1" for hierarchy "mux2X1:RFInter_" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 100
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 122
+Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:SignExtend_" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 127
+Info (12128): Elaborating entity "mux2X1" for hierarchy "mux2X1:ALUMux1_" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 135
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:Alu" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 150
+Info (12128): Elaborating entity "DataMem" for hierarchy "DataMem:DM_" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 192
+Info (12128): Elaborating entity "altsyncram" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v Line: 89
+Info (12130): Elaborated megafunction instantiation "DataMem:DM_|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v Line: 89
+Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
@@ -952,14 +952,14 @@ Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_compo
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_13k1.tdf
-    Info (12023): Found entity 1: altsyncram_13k1 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_13k1" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_13k1 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_13k1" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ala2.tdf
-    Info (12023): Found entity 1: altsyncram_ala2 File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_ala2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_ala2" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 38
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
-Info (12130): Elaborated megafunction instantiation "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
-Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/altsyncram_13k1.tdf Line: 39
+    Info (12023): Found entity 1: altsyncram_ala2 File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_ala2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ala2" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|altsyncram_ala2:altsyncram1" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf Line: 38
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf Line: 39
+Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/altsyncram_13k1.tdf Line: 39
     Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -968,12 +968,12 @@ Info (12133): Instantiated megafunction "DataMem:DM_|altsyncram:altsyncram_compo
     Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
     Info (12134): Parameter "WIDTH_WORD" = "32"
     Info (12134): Parameter "WIDTHAD" = "10"
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:PCMux_" File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 217
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "DataMem:DM_|altsyncram:altsyncram_component|altsyncram_13k1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: d:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:PCMux_" File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 217
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.11.07.10:04:20 Progress: Loading sld128f4b33/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.11.19.19:54:58 Progress: Loading sld128f4b33/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -984,38 +984,38 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/db/ip/sld128f4b33/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (144001): Generated suppressed messages file C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/output_files/single_cycle.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/User/Desktop/MIPS_Single_Cycle-main/output_files/single_cycle.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3614 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3625 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 3527 logic cells
+    Info (21061): Implemented 3538 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Thu Nov 07 11:04:38 2024
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:38
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Tue Nov 19 20:55:17 2024
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/output_files/single_cycle.map.smsg.
+The suppressed messages can be found in C:/Users/User/Desktop/MIPS_Single_Cycle-main/output_files/single_cycle.map.smsg.
 
 

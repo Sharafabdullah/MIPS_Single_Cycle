@@ -23,23 +23,23 @@ module single_cycle_tb1;
         // Initialize signals
         clk = 0;
         rst = 1;
-        
-        // Apply reset
-        #10 rst = 0;  // Release reset after 10 time units
-        
-        // Test with no reset (normal operation)
-        #100;  // Run for 100 time units
-        
-        // Test with reset again
-        rst = 1;  // Apply reset
-        #10 rst = 0;  // Release reset
-        
-        // Test case to check program counter behavior
-        #50;  // Run for 50 more time units
-        
-        // End simulation
-        $finish;
-    end
+       // Apply reset
+    $display("Applying reset...");
+    rst = 1;
+    #10;
+    rst = 0;
+    #10;
+    
+    // Test 1: Run through the 15 instructions
+    $display("Running through the 15 instructions...");
+    
+    // Wait for the processor to execute all instructions
+    #100; // You may need to adjust this delay depending on your clock and instructions
+
+    // End of test
+    $finish;
+  end
+  
     
     // Monitor signals
     initial begin

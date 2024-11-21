@@ -1,5 +1,4 @@
-
-module Adder(in1, in2, out);
+module Adder(in1, in2, out);                 // checked
 	// size parameter
 	parameter size = 16;
 	// inputs

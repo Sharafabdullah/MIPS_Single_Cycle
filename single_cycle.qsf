@@ -58,9 +58,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
 set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
@@ -89,5 +86,19 @@ set_global_assignment -name VERILOG_FILE single_cycle_tb1.v
 set_global_assignment -name EDA_TEST_BENCH_NAME single_cycle_tb1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id single_cycle_tb1
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME single_cycle_tb1 -section_id single_cycle_tb1
+set_global_assignment -name VERILOG_FILE ALU_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
+set_global_assignment -name VERILOG_FILE CU_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME CU_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CU_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CU_tb -section_id CU_tb
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY ON -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE single_cycle_tb1.v -section_id single_cycle_tb1
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.v -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE CU_tb.v -section_id CU_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

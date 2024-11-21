@@ -42,9 +42,9 @@ module InstMem (
 	clock,
 	q);
 
-	input	[11:0]  address;
+	input	[11:0]  address;           //2k
 	input	  clock;
-	output	[31:0]  q;
+	output	[31:0]  q;               //4 byte 
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif

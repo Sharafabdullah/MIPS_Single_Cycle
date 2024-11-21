@@ -73,7 +73,7 @@ module single_cycle(clk,
     );
     
     
-    ControlUnit CU(
+    ControlUnit CU(           
     .OpCode(OpCode),
     .Funct(Funct),
     .RegDst(RegDst),
@@ -92,7 +92,7 @@ module single_cycle(clk,
     );
     
     wire [4:0] WrRegInter;
-    mux2x1 #(5) RFInter_(
+    mux2X1 #(5) RFInter_(
     .in1(rt),
     .in2(rd),
     .s(RegDst),
@@ -100,7 +100,7 @@ module single_cycle(clk,
     ); //corrected WrReg
     
     // If there is jal -> write at the register 31 (ra)
-    mux2x1 #(5) RFMux_(
+    mux2X1 #(5) RFMux_(
     .in1(WrRegInter),
     .in2(5'b11111),
     .s(Jump & RegWrEn),
@@ -127,14 +127,14 @@ module single_cycle(clk,
     );
 
     //! Added mux
-    mux2x1 #(32) ALUMux1_(
+    mux2X1 #(32) ALUMux1_(
         .in1(RdData1),
-        .in2(shamt),
+        .in2({27'b0,shamt}),             //19-11 first bug - shamt must be extended             
         .s(ALUSrc1), 
         .out(ALUin1)
     );
     
-    mux2x1 #(32) ALUMux2_(
+    mux2X1 #(32) ALUMux2_(
     .in1(RdData2),
     .in2(ExtImm),
     .s(ALUSrc2),
@@ -192,7 +192,7 @@ module single_cycle(clk,
     );
     
     wire [31:0] WrDataInter;
-    mux2x1 #(32) WBMux1_(
+    mux2X1 #(32) WBMux1_(
     .in1(ALURes),
     .in2(MemRdData),
     .s(MemtoReg),
@@ -200,7 +200,7 @@ module single_cycle(clk,
     ); //swapped MemRdData and ALURes
 
     //! Added if there is JAL 
-    mux2x1 #(32) WBMux2_(
+    mux2X1 #(32) WBMux2_(
     .in1(WrDataInter), 
     .in2(nextPC),
     .s(Jump & RegWrEn),

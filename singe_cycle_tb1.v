@@ -1,4 +1,4 @@
-module test_single_cycle;
+module singe_cycle_tb1;
 
     // Testbench signals
     reg clk, rst;

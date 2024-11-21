@@ -1,0 +1,77 @@
+`timescale 1ns/1ps
+
+module ControlUnit_tb;
+
+    // Inputs
+    reg [5:0] OpCode;
+    reg [5:0] Funct;
+    
+    // Outputs
+    wire RegDst, BranchEq, BranchNeq, InvalidInst, Jump, JumpReg;
+    wire MemRdEn, MemtoReg, MemWrEn, RegWrEn, ALUSrc1, ALUSrc2;
+    wire [3:0] ALUOp;
+    
+    // Instantiate the Control Unit
+    ControlUnit uut (
+        .OpCode(OpCode),
+        .Funct(Funct),
+        .RegDst(RegDst),
+        .BranchEq(BranchEq),
+        .BranchNeq(BranchNeq),
+        .InvalidInst(InvalidInst),
+        .Jump(Jump),
+        .JumpReg(JumpReg),
+        .MemRdEn(MemRdEn),
+        .MemtoReg(MemtoReg),
+        .ALUOp(ALUOp),
+        .MemWrEn(MemWrEn),
+        .RegWrEn(RegWrEn),
+        .ALUSrc1(ALUSrc1),
+        .ALUSrc2(ALUSrc2)
+    );
+
+    // Test procedure
+    initial begin
+        // Display output headings
+        $display("Time\tOpCode\tFunct\tRegDst\tBranchEq\tBranchNeq\tJump\tJumpReg\tMemRdEn\tMemWrEn\tRegWrEn\tMemtoReg\tALUSrc1\tALUSrc2\tALUOp\tInvalidInst");
+
+        // Monitor the changes in inputs and outputs
+        $monitor("%0dns\t%0h\t%0h\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b",
+                 $time, OpCode, Funct, RegDst, BranchEq, BranchNeq, Jump, JumpReg, MemRdEn, MemWrEn, 
+                 RegWrEn, MemtoReg, ALUSrc1, ALUSrc2, ALUOp, InvalidInst);
+
+        // Test _RType instructions
+        OpCode = 6'h00; Funct = 6'h20; #10; // add
+        OpCode = 6'h00; Funct = 6'h22; #10; // sub
+        OpCode = 6'h00; Funct = 6'h24; #10; // and
+        OpCode = 6'h00; Funct = 6'h25; #10; // or
+        OpCode = 6'h00; Funct = 6'h2A; #10; // slt
+        OpCode = 6'h00; Funct = 6'h00; #10; // sll
+        OpCode = 6'h00; Funct = 6'h02; #10; // srl
+        OpCode = 6'h00; Funct = 6'h27; #10; // nor
+        OpCode = 6'h00; Funct = 6'h26; #10; // xor
+        OpCode = 6'h00; Funct = 6'h08; #10; // jr
+
+        // Test I-Type instructions
+        OpCode = 6'h08; Funct = 6'h00; #10; // addi
+        OpCode = 6'h0D; Funct = 6'h00; #10; // ori
+        OpCode = 6'h0E; Funct = 6'h00; #10; // xori
+        OpCode = 6'h0C; Funct = 6'h00; #10; // andi
+        OpCode = 6'h0A; Funct = 6'h00; #10; // slti
+        OpCode = 6'h23; Funct = 6'h00; #10; // lw
+        OpCode = 6'h2B; Funct = 6'h00; #10; // sw
+        OpCode = 6'h04; Funct = 6'h00; #10; // beq
+        OpCode = 6'h05; Funct = 6'h00; #10; // bne
+        
+        // Test J-Type instructions
+        OpCode = 6'h02; Funct = 6'h00; #10; // j
+        OpCode = 6'h03; Funct = 6'h00; #10; // jal
+        
+        // Test Invalid instruction
+        OpCode = 6'h3F; Funct = 6'h00; #10; // Invalid OpCode
+        
+        // Finish simulation
+        $finish;
+    end
+
+endmodule

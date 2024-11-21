@@ -1,4 +1,4 @@
-module RegisterFile (
+module RegisterFile (                             
     clk,
     rst,
     WrEn,

@@ -1,4 +1,4 @@
-module ALU (operand1, operand2, opSel, result, zero);
+module ALU (operand1, operand2, opSel, result, zero);   
     
     parameter data_width = 32;
     parameter sel_width = 4;
@@ -28,8 +28,8 @@ module ALU (operand1, operand2, opSel, result, zero);
             _XOR: result = operand1 ^ operand2; 
             _NOR: result = ~(operand1 | operand2); // NOR operation
 
-            _SLL: result = operand1 << operand2;  // SLL - shift left logical
-            _SRL: result = operand1 >> operand2;  // SRL - shift right logical
+            _SLL: result = operand2 << operand1;  // SLL - shift left logical
+            _SRL: result = operand2 >> operand1;  // SRL - shift right logical
             
             _SGT: result = (operand1 > operand2) ? 1 : 0;
             default: result = {data_width{1'b0}}; // Set to zero if no match

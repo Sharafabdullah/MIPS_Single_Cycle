@@ -784,7 +784,7 @@ ALUSrc1 <= ALUSrc1.DB_MAX_OUTPUT_PORT_TYPE
 ALUSrc2 <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:RFInter_
+|single_cycle|mux2X1:RFInter_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
@@ -807,7 +807,7 @@ out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:RFMux_
+|single_cycle|mux2X1:RFMux_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
@@ -4367,7 +4367,7 @@ out[30] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:ALUMux1_
+|single_cycle|mux2X1:ALUMux1_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
@@ -4498,7 +4498,7 @@ out[30] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:ALUMux2_
+|single_cycle|mux2X1:ALUMux2_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
@@ -7016,7 +7016,7 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:WBMux1_
+|single_cycle|mux2X1:WBMux1_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
@@ -7147,7 +7147,7 @@ out[30] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|single_cycle|mux2x1:WBMux2_
+|single_cycle|mux2X1:WBMux2_
 in1[0] => out.DATAB
 in1[1] => out.DATAB
 in1[2] => out.DATAB
