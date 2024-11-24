@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Nov 23 05:58:34 2024
+Analysis & Synthesis Status : Successful - Sun Nov 24 21:56:48 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : single_cycle
 Top-level Entity Name : single_cycle
 Family : MAX 10
-Total logic elements : 3,578
-    Total combinational functions : 2,587
-    Dedicated logic registers : 1,160
-Total registers : 1160
-Total pins : 18
+Total logic elements : 3,346
+    Total combinational functions : 2,386
+    Dedicated logic registers : 1,024
+Total registers : 1024
+Total pins : 34
 Total virtual pins : 0
 Total memory bits : 163,840
 Embedded Multiplier 9-bit elements : 0

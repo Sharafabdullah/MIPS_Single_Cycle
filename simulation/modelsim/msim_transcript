@@ -12,129 +12,129 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:05 on Nov 23,2024
+# Start time: 22:09:25 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v 
 # -- Compiling module Adder
 # 
 # Top level modules:
 # 	Adder
-# End time: 05:59:05 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:25 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:05 on Nov 23,2024
+# Start time: 22:09:25 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 05:59:05 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:25 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:05 on Nov 23,2024
+# Start time: 22:09:25 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v 
 # -- Compiling module single_cycle
 # 
 # Top level modules:
 # 	single_cycle
-# End time: 05:59:05 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v 
 # -- Compiling module InstMem
 # 
 # Top level modules:
 # 	InstMem
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v 
 # -- Compiling module ControlUnit
 # 
 # Top level modules:
 # 	ControlUnit
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v 
 # -- Compiling module mux2X1
 # 
 # Top level modules:
 # 	mux2X1
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v 
 # -- Compiling module RegisterFile
 # 
 # Top level modules:
 # 	RegisterFile
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v 
 # -- Compiling module SignExtender
 # 
 # Top level modules:
 # 	SignExtender
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v 
 # -- Compiling module mux4x1
 # 
 # Top level modules:
 # 	mux4x1
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 05:59:06 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:26 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:06 on Nov 23,2024
+# Start time: 22:09:26 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v 
 # -- Compiling module DataMem
 # 
 # Top level modules:
 # 	DataMem
-# End time: 05:59:07 on Nov 23,2024, Elapsed time: 0:00:01
+# End time: 22:09:27 on Nov 24,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/shara/Desktop/JoSCD/Development\ Phase/Single_Cycle_Code {C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:59:07 on Nov 23,2024
+# Start time: 22:09:27 on Nov 24,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code" C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v 
 # -- Compiling module single_cycle_tb1
 # 
 # Top level modules:
 # 	single_cycle_tb1
-# End time: 05:59:07 on Nov 23,2024, Elapsed time: 0:00:00
+# End time: 22:09:27 on Nov 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  single_cycle_tb1
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" single_cycle_tb1 
-# Start time: 05:59:07 on Nov 23,2024
+# Start time: 22:09:27 on Nov 24,2024
 # Loading work.single_cycle_tb1
 # Loading work.single_cycle
 # Loading work.ProgramCounter
@@ -151,25 +151,17 @@
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'PCin'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/pc File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCAdder File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 59
-# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 69
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/branchAdder_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 180
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 60
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: shara  Hostname: DESKTOP-32LU2OU  ProcessID: 11640
-#           Attempting to use alternate WLF file "./wlftfctdgr".
+#           Attempting to use alternate WLF file "./wlftyycg7z".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfctdgr
+#           Using alternate file: ./wlftyycg7z
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -190,130 +182,115 @@
 # Time = 50000 | PC = 0004 | clk = 0 | rst = 0
 # Time = 55000 | PC = 0005 | clk = 1 | rst = 0
 # Time = 60000 | PC = 0005 | clk = 0 | rst = 0
-# Time = 65000 | PC = 0006 | clk = 1 | rst = 0
-# Time = 70000 | PC = 0006 | clk = 0 | rst = 0
-# Time = 75000 | PC = 0007 | clk = 1 | rst = 0
-# Time = 80000 | PC = 0007 | clk = 0 | rst = 0
-# Time = 85000 | PC = 0008 | clk = 1 | rst = 0
-# Time = 90000 | PC = 0008 | clk = 0 | rst = 0
-# Time = 95000 | PC = 0009 | clk = 1 | rst = 0
-# Time = 100000 | PC = 0009 | clk = 0 | rst = 0
-# Time = 105000 | PC = 000a | clk = 1 | rst = 0
-# Time = 110000 | PC = 000a | clk = 0 | rst = 0
-# Time = 115000 | PC = 000b | clk = 1 | rst = 0
-# Time = 120000 | PC = 000b | clk = 0 | rst = 0
-# Time = 125000 | PC = 000c | clk = 1 | rst = 0
-# Time = 130000 | PC = 000c | clk = 0 | rst = 0
-# Time = 135000 | PC = 000d | clk = 1 | rst = 0
-# Time = 140000 | PC = 000d | clk = 0 | rst = 0
-# Time = 145000 | PC = 000e | clk = 1 | rst = 0
-# Time = 150000 | PC = 000e | clk = 0 | rst = 0
-# Time = 155000 | PC = 000f | clk = 1 | rst = 0
-# Time = 160000 | PC = 000f | clk = 0 | rst = 0
-# Time = 165000 | PC = 0010 | clk = 1 | rst = 0
-# Time = 170000 | PC = 0010 | clk = 0 | rst = 0
-# Time = 175000 | PC = 0011 | clk = 1 | rst = 0
-# Time = 180000 | PC = 0011 | clk = 0 | rst = 0
-# Time = 185000 | PC = 0012 | clk = 1 | rst = 0
-# Time = 190000 | PC = 0012 | clk = 0 | rst = 0
-# Time = 195000 | PC = 0013 | clk = 1 | rst = 0
-# Time = 200000 | PC = 0013 | clk = 0 | rst = 0
-# Time = 205000 | PC = 0014 | clk = 1 | rst = 0
-# Time = 210000 | PC = 0014 | clk = 0 | rst = 0
-# Time = 215000 | PC = 0015 | clk = 1 | rst = 0
+# Time = 65000 | PC = 0008 | clk = 1 | rst = 0
+# Time = 70000 | PC = 0008 | clk = 0 | rst = 0
+# Time = 75000 | PC = 0009 | clk = 1 | rst = 0
+# Time = 80000 | PC = 0009 | clk = 0 | rst = 0
+# Time = 85000 | PC = 000a | clk = 1 | rst = 0
+# Time = 90000 | PC = 000a | clk = 0 | rst = 0
+# Time = 95000 | PC = 000b | clk = 1 | rst = 0
+# Time = 100000 | PC = 000b | clk = 0 | rst = 0
+# Time = 105000 | PC = 000c | clk = 1 | rst = 0
+# Time = 110000 | PC = 000c | clk = 0 | rst = 0
+# Time = 115000 | PC = 000d | clk = 1 | rst = 0
+# Time = 120000 | PC = 000d | clk = 0 | rst = 0
+# Time = 125000 | PC = 000e | clk = 1 | rst = 0
+# Time = 130000 | PC = 000e | clk = 0 | rst = 0
+# Time = 135000 | PC = 000a | clk = 1 | rst = 0
+# Time = 140000 | PC = 000a | clk = 0 | rst = 0
+# Time = 145000 | PC = 000b | clk = 1 | rst = 0
+# Time = 150000 | PC = 000b | clk = 0 | rst = 0
+# Time = 155000 | PC = 000c | clk = 1 | rst = 0
+# Time = 160000 | PC = 000c | clk = 0 | rst = 0
+# Time = 165000 | PC = 000d | clk = 1 | rst = 0
+# Time = 170000 | PC = 000d | clk = 0 | rst = 0
+# Time = 175000 | PC = 000e | clk = 1 | rst = 0
+# Time = 180000 | PC = 000e | clk = 0 | rst = 0
+# Time = 185000 | PC = 000a | clk = 1 | rst = 0
+# Time = 190000 | PC = 000a | clk = 0 | rst = 0
+# Time = 195000 | PC = 000b | clk = 1 | rst = 0
+# Time = 200000 | PC = 000b | clk = 0 | rst = 0
+# Time = 205000 | PC = 000c | clk = 1 | rst = 0
+# Time = 210000 | PC = 000c | clk = 0 | rst = 0
+# Time = 215000 | PC = 000d | clk = 1 | rst = 0
+# ** Note: $stop    : C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v(40)
+#    Time: 220 ns  Iteration: 0  Instance: /single_cycle_tb1
+# Break in Module single_cycle_tb1 at C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v line 40
+add wave -position end  sim:/single_cycle_tb1/uut/DM_/data
+add wave -position end  sim:/single_cycle_tb1/uut/DM_/q
+add wave -position end  sim:/single_cycle_tb1/uut/DM_/rden
+add wave -position end  sim:/single_cycle_tb1/uut/DM_/wren
+add wave -position end  sim:/single_cycle_tb1/uut/RF/registers
+res
+# ambiguous command name "res": resetGlobalEvcd resetTime resolveBusMember restart restartCmd restartDone restartError restartParse restore results_image resultsdir_image resultsdirne_image resultsfile_image resume
+
+restart 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 60
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Applying reset...
+# Time = 0 | PC = xxxx | clk = 0 | rst = 1
+# Time = 5000 | PC = 0000 | clk = 1 | rst = 1
+# Time = 10000 | PC = 0000 | clk = 0 | rst = 0
+# Time = 15000 | PC = 0001 | clk = 1 | rst = 0
+# Running through the 15 instructions...
+# Time = 20000 | PC = 0001 | clk = 0 | rst = 0
+# Time = 25000 | PC = 0002 | clk = 1 | rst = 0
+# Time = 30000 | PC = 0002 | clk = 0 | rst = 0
+# Time = 35000 | PC = 0003 | clk = 1 | rst = 0
+# Time = 40000 | PC = 0003 | clk = 0 | rst = 0
+# Time = 45000 | PC = 0004 | clk = 1 | rst = 0
+# Time = 50000 | PC = 0004 | clk = 0 | rst = 0
+# Time = 55000 | PC = 0005 | clk = 1 | rst = 0
+# Time = 60000 | PC = 0005 | clk = 0 | rst = 0
+# Time = 65000 | PC = 0008 | clk = 1 | rst = 0
+# Time = 70000 | PC = 0008 | clk = 0 | rst = 0
+# Time = 75000 | PC = 0009 | clk = 1 | rst = 0
+# Time = 80000 | PC = 0009 | clk = 0 | rst = 0
+# Time = 85000 | PC = 000a | clk = 1 | rst = 0
+# Time = 90000 | PC = 000a | clk = 0 | rst = 0
+# Time = 95000 | PC = 000b | clk = 1 | rst = 0
+# Time = 100000 | PC = 000b | clk = 0 | rst = 0
+# Time = 105000 | PC = 000c | clk = 1 | rst = 0
+# Time = 110000 | PC = 000c | clk = 0 | rst = 0
+# Time = 115000 | PC = 000d | clk = 1 | rst = 0
+# Time = 120000 | PC = 000d | clk = 0 | rst = 0
+# Time = 125000 | PC = 000e | clk = 1 | rst = 0
+# Time = 130000 | PC = 000e | clk = 0 | rst = 0
+# Time = 135000 | PC = 000a | clk = 1 | rst = 0
+# Time = 140000 | PC = 000a | clk = 0 | rst = 0
+# Time = 145000 | PC = 000b | clk = 1 | rst = 0
+# Time = 150000 | PC = 000b | clk = 0 | rst = 0
+# Time = 155000 | PC = 000c | clk = 1 | rst = 0
+# Time = 160000 | PC = 000c | clk = 0 | rst = 0
+# Time = 165000 | PC = 000d | clk = 1 | rst = 0
+# Time = 170000 | PC = 000d | clk = 0 | rst = 0
+# Time = 175000 | PC = 000e | clk = 1 | rst = 0
+# Time = 180000 | PC = 000e | clk = 0 | rst = 0
+# Time = 185000 | PC = 000a | clk = 1 | rst = 0
+# Time = 190000 | PC = 000a | clk = 0 | rst = 0
+# Time = 195000 | PC = 000b | clk = 1 | rst = 0
+# Time = 200000 | PC = 000b | clk = 0 | rst = 0
+# Time = 205000 | PC = 000c | clk = 1 | rst = 0
+# Time = 210000 | PC = 000c | clk = 0 | rst = 0
+# Time = 215000 | PC = 000d | clk = 1 | rst = 0
 # ** Note: $stop    : C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v(40)
 #    Time: 220 ns  Iteration: 0  Instance: /single_cycle_tb1
 # Break in Module single_cycle_tb1 at C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v line 40
 add wave -position insertpoint  \
 sim:/single_cycle_tb1/uut/Instruction
-# Can't move the Now cursor.
-add wave -position end  sim:/single_cycle_tb1/uut/RF/registers
-add wave -position 4  sim:/single_cycle_tb1/uut/RF/WrEn
-add wave -position 5  sim:/single_cycle_tb1/uut/RF/WrData
-add wave -position 6  sim:/single_cycle_tb1/uut/RF/WrReg
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'PCin'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/pc File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCAdder File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 59
-# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 69
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/branchAdder_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 180
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Applying reset...
-# Time = 0 | PC = xxxx | clk = 0 | rst = 1
-# Time = 5000 | PC = 0000 | clk = 1 | rst = 1
-# Time = 10000 | PC = 0000 | clk = 0 | rst = 0
-# Time = 15000 | PC = 0001 | clk = 1 | rst = 0
-# Running through the 15 instructions...
-# Time = 20000 | PC = 0001 | clk = 0 | rst = 0
-# Time = 25000 | PC = 0002 | clk = 1 | rst = 0
-# Time = 30000 | PC = 0002 | clk = 0 | rst = 0
-# Time = 35000 | PC = 0003 | clk = 1 | rst = 0
-# Time = 40000 | PC = 0003 | clk = 0 | rst = 0
-# Time = 45000 | PC = 0004 | clk = 1 | rst = 0
-# Time = 50000 | PC = 0004 | clk = 0 | rst = 0
-# Time = 55000 | PC = 0005 | clk = 1 | rst = 0
-# Time = 60000 | PC = 0005 | clk = 0 | rst = 0
-# Time = 65000 | PC = 0006 | clk = 1 | rst = 0
-# Time = 70000 | PC = 0006 | clk = 0 | rst = 0
-# Time = 75000 | PC = 0007 | clk = 1 | rst = 0
-# Time = 80000 | PC = 0007 | clk = 0 | rst = 0
-# Time = 85000 | PC = 0008 | clk = 1 | rst = 0
-# Time = 90000 | PC = 0008 | clk = 0 | rst = 0
-# Time = 95000 | PC = 0009 | clk = 1 | rst = 0
-# Time = 100000 | PC = 0009 | clk = 0 | rst = 0
-# Time = 105000 | PC = 000a | clk = 1 | rst = 0
-# Time = 110000 | PC = 000a | clk = 0 | rst = 0
-# Time = 115000 | PC = 000b | clk = 1 | rst = 0
-# Time = 120000 | PC = 000b | clk = 0 | rst = 0
-# Time = 125000 | PC = 000c | clk = 1 | rst = 0
-# Time = 130000 | PC = 000c | clk = 0 | rst = 0
-# Time = 135000 | PC = 000d | clk = 1 | rst = 0
-# Time = 140000 | PC = 000d | clk = 0 | rst = 0
-# Time = 145000 | PC = 000e | clk = 1 | rst = 0
-# Time = 150000 | PC = 000e | clk = 0 | rst = 0
-# Time = 155000 | PC = 000f | clk = 1 | rst = 0
-# Time = 160000 | PC = 000f | clk = 0 | rst = 0
-# Time = 165000 | PC = 0010 | clk = 1 | rst = 0
-# Time = 170000 | PC = 0010 | clk = 0 | rst = 0
-# Time = 175000 | PC = 0011 | clk = 1 | rst = 0
-# Time = 180000 | PC = 0011 | clk = 0 | rst = 0
-# Time = 185000 | PC = 0012 | clk = 1 | rst = 0
-# Time = 190000 | PC = 0012 | clk = 0 | rst = 0
-# Time = 195000 | PC = 0013 | clk = 1 | rst = 0
-# Time = 200000 | PC = 0013 | clk = 0 | rst = 0
-# Time = 205000 | PC = 0014 | clk = 1 | rst = 0
-# Time = 210000 | PC = 0014 | clk = 0 | rst = 0
-# Time = 215000 | PC = 0015 | clk = 1 | rst = 0
-# ** Note: $stop    : C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v(40)
-#    Time: 220 ns  Iteration: 0  Instance: /single_cycle_tb1
-# Break in Module single_cycle_tb1 at C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v line 40
-add wave -position 4  sim:/single_cycle_tb1/uut/RdData2
-add wave -position 5  sim:/single_cycle_tb1/uut/MemRdData
 restart 
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'PCin'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/pc File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCAdder File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 59
-# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 69
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/branchAdder_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 180
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'in1'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'out'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/PCMux_ File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (16) for port 'PC'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_tb1/uut/IM File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 60
 run -all
 # GetModuleFileName: The specified module could not be found.
 # 
@@ -333,39 +310,39 @@ run -all
 # Time = 50000 | PC = 0004 | clk = 0 | rst = 0
 # Time = 55000 | PC = 0005 | clk = 1 | rst = 0
 # Time = 60000 | PC = 0005 | clk = 0 | rst = 0
-# Time = 65000 | PC = 0006 | clk = 1 | rst = 0
-# Time = 70000 | PC = 0006 | clk = 0 | rst = 0
-# Time = 75000 | PC = 0007 | clk = 1 | rst = 0
-# Time = 80000 | PC = 0007 | clk = 0 | rst = 0
-# Time = 85000 | PC = 0008 | clk = 1 | rst = 0
-# Time = 90000 | PC = 0008 | clk = 0 | rst = 0
-# Time = 95000 | PC = 0009 | clk = 1 | rst = 0
-# Time = 100000 | PC = 0009 | clk = 0 | rst = 0
-# Time = 105000 | PC = 000a | clk = 1 | rst = 0
-# Time = 110000 | PC = 000a | clk = 0 | rst = 0
-# Time = 115000 | PC = 000b | clk = 1 | rst = 0
-# Time = 120000 | PC = 000b | clk = 0 | rst = 0
-# Time = 125000 | PC = 000c | clk = 1 | rst = 0
-# Time = 130000 | PC = 000c | clk = 0 | rst = 0
-# Time = 135000 | PC = 000d | clk = 1 | rst = 0
-# Time = 140000 | PC = 000d | clk = 0 | rst = 0
-# Time = 145000 | PC = 000e | clk = 1 | rst = 0
-# Time = 150000 | PC = 000e | clk = 0 | rst = 0
-# Time = 155000 | PC = 000f | clk = 1 | rst = 0
-# Time = 160000 | PC = 000f | clk = 0 | rst = 0
-# Time = 165000 | PC = 0010 | clk = 1 | rst = 0
-# Time = 170000 | PC = 0010 | clk = 0 | rst = 0
-# Time = 175000 | PC = 0011 | clk = 1 | rst = 0
-# Time = 180000 | PC = 0011 | clk = 0 | rst = 0
-# Time = 185000 | PC = 0012 | clk = 1 | rst = 0
-# Time = 190000 | PC = 0012 | clk = 0 | rst = 0
-# Time = 195000 | PC = 0013 | clk = 1 | rst = 0
-# Time = 200000 | PC = 0013 | clk = 0 | rst = 0
-# Time = 205000 | PC = 0014 | clk = 1 | rst = 0
-# Time = 210000 | PC = 0014 | clk = 0 | rst = 0
-# Time = 215000 | PC = 0015 | clk = 1 | rst = 0
+# Time = 65000 | PC = 0008 | clk = 1 | rst = 0
+# Time = 70000 | PC = 0008 | clk = 0 | rst = 0
+# Time = 75000 | PC = 0009 | clk = 1 | rst = 0
+# Time = 80000 | PC = 0009 | clk = 0 | rst = 0
+# Time = 85000 | PC = 000a | clk = 1 | rst = 0
+# Time = 90000 | PC = 000a | clk = 0 | rst = 0
+# Time = 95000 | PC = 000b | clk = 1 | rst = 0
+# Time = 100000 | PC = 000b | clk = 0 | rst = 0
+# Time = 105000 | PC = 000c | clk = 1 | rst = 0
+# Time = 110000 | PC = 000c | clk = 0 | rst = 0
+# Time = 115000 | PC = 000d | clk = 1 | rst = 0
+# Time = 120000 | PC = 000d | clk = 0 | rst = 0
+# Time = 125000 | PC = 000e | clk = 1 | rst = 0
+# Time = 130000 | PC = 000e | clk = 0 | rst = 0
+# Time = 135000 | PC = 000a | clk = 1 | rst = 0
+# Time = 140000 | PC = 000a | clk = 0 | rst = 0
+# Time = 145000 | PC = 000b | clk = 1 | rst = 0
+# Time = 150000 | PC = 000b | clk = 0 | rst = 0
+# Time = 155000 | PC = 000c | clk = 1 | rst = 0
+# Time = 160000 | PC = 000c | clk = 0 | rst = 0
+# Time = 165000 | PC = 000d | clk = 1 | rst = 0
+# Time = 170000 | PC = 000d | clk = 0 | rst = 0
+# Time = 175000 | PC = 000e | clk = 1 | rst = 0
+# Time = 180000 | PC = 000e | clk = 0 | rst = 0
+# Time = 185000 | PC = 000a | clk = 1 | rst = 0
+# Time = 190000 | PC = 000a | clk = 0 | rst = 0
+# Time = 195000 | PC = 000b | clk = 1 | rst = 0
+# Time = 200000 | PC = 000b | clk = 0 | rst = 0
+# Time = 205000 | PC = 000c | clk = 1 | rst = 0
+# Time = 210000 | PC = 000c | clk = 0 | rst = 0
+# Time = 215000 | PC = 000d | clk = 1 | rst = 0
 # ** Note: $stop    : C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v(40)
 #    Time: 220 ns  Iteration: 0  Instance: /single_cycle_tb1
 # Break in Module single_cycle_tb1 at C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v line 40
-# End time: 06:51:30 on Nov 23,2024, Elapsed time: 0:52:23
-# Errors: 0, Warnings: 6
+# End time: 22:17:16 on Nov 24,2024, Elapsed time: 0:07:49
+# Errors: 0, Warnings: 2

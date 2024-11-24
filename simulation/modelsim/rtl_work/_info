@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 dC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/simulation/modelsim
 vAdder
-Z1 !s110 1732330745
+Z1 !s110 1732475365
 !i10b 1
 !s100 Th=X80flA7b5B5j2JlS@51
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IY29598J=1nmB6Re39>kjj2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1731942701
+w1732471889
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v
 !i122 0
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1732330745.000000
+Z6 !s108 1732475365.000000
 !s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v|
 !i113 1
@@ -35,7 +35,7 @@ Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/shara/Desktop/JoSCD/Developme
 Z9 tCvgOpt 0
 n@adder
 vALU
-Z10 !s110 1732330746
+Z10 !s110 1732475366
 !i10b 1
 !s100 CX8CWzPBZ:RT8;A9S7=EM2
 R2
@@ -51,7 +51,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1732330746.000000
+Z11 !s108 1732475366.000000
 !s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v|
 !i113 1
@@ -67,7 +67,7 @@ R2
 I89>BQkdMb<XO1gzz[H^CG0
 R3
 R0
-w1732204889
+w1732472197
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v
 !i122 4
@@ -85,18 +85,18 @@ R8
 R9
 n@control@unit
 vDataMem
-Z12 !s110 1732330747
+Z12 !s110 1732475367
 !i10b 1
-!s100 TzK3?RDAJ<FK=^nKGe6PS1
+!s100 Yc><?NdlLznRogIkQ4ZON2
 R2
-IzKa99k>KMO`<7^ifX4ecl1
+IX]nd6@<^NL`7C8hg>9J^@0
 R3
 R0
-Z13 w1731788528
+w1732474135
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v
 !i122 10
-L0 40 69
+L0 40 70
 R5
 r1
 !s85 0
@@ -146,7 +146,7 @@ w1732041814
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v
 !i122 5
-Z14 L0 1 13
+Z13 L0 1 13
 R5
 r1
 !s85 0
@@ -171,7 +171,7 @@ w1732041899
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v
 !i122 8
-R14
+R13
 R5
 r1
 !s85 0
@@ -186,16 +186,16 @@ R9
 vProgramCounter
 R1
 !i10b 1
-!s100 _[IlQ067jejS;agf;oM[b2
+!s100 l_Oo]]h1bZUFF4L6GNNRR2
 R2
-IOEcA[@4G391];GOVOQ@lN3
+Iojnon=M;Z?JW=aPkT0e[c0
 R3
 R0
-R13
+w1732471715
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v
 !i122 1
-L0 1 24
+L0 1 27
 R5
 r1
 !s85 0
@@ -211,16 +211,16 @@ n@program@counter
 vRegisterFile
 R10
 !i10b 1
-!s100 =@6=PU[CcaRlRPM??5nW:3
+!s100 Ya9Pe[1BYi99aKIJ=kP?M0
 R2
-I>4>NXPZOH1o?nl75cEml52
+Im[9Q=knX3O]azhoDVHY0W1
 R3
 R0
-w1732328407
+w1732472969
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v
 !i122 6
-L0 1 51
+L0 1 40
 R5
 r1
 !s85 0
@@ -259,18 +259,18 @@ R8
 R9
 n@sign@extender
 vsingle_cycle
-R1
+R10
 !i10b 1
-!s100 Qnm?mQa=52CM46DSAQC7Y0
+!s100 6ig]7<YBmFlVOZ]DYMPgW3
 R2
-IoaGVFI6A@hjj^@^>Sk0ia3
+ImNF?bjWP<jT5S<flD3Vco3
 R3
 R0
-w1732330299
+w1732475056
 8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v
 FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v
 !i122 2
-L0 1 220
+L0 1 207
 R5
 r1
 !s85 0
@@ -299,7 +299,7 @@ R5
 r1
 !s85 0
 31
-!s108 1732330747.000000
+!s108 1732475367.000000
 !s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
 !i113 1

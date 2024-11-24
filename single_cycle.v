@@ -58,7 +58,7 @@ module single_cycle(clk,
     );
     
     InstMem IM(
-    .address(PC),
+    .address(nextPC),
     .clock(clk),
     .q(Instruction)
     );
