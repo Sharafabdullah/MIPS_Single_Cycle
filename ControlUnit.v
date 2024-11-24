@@ -41,7 +41,7 @@ module ControlUnit(
         RegDst  = 1'b0; BranchEq  = 1'b0; BranchNeq = 1'b0; MemRdEn  = 1'b0;
 		  MemtoReg  = 1'b0; Jump = 1'b0; JumpReg = 1'b0;
         
-		  InvalidInst = 0'b0;
+		InvalidInst = 1'b0;
 		  
         MemWrEn = 1'b0; RegWrEn = 1'b0;ALUSrc1 = 1'b0; ALUSrc2 = 1'b0;
         ALUOp   = 4'b1111;

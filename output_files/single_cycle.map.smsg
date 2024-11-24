@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at single_cycle.v(15): object "PC" differs only in case from object "pc" in the same scope File: C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v Line: 15
+Info (10281): Verilog HDL Declaration information at single_cycle.v(15): object "PC" differs only in case from object "pc" in the same scope File: C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v Line: 15

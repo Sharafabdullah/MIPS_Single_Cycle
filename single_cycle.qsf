@@ -81,7 +81,6 @@ set_global_assignment -name VERILOG_FILE SignExtender.v
 set_global_assignment -name VERILOG_FILE mux4x1.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name QIP_FILE DataMem.qip
-set_global_assignment -name VERILOG_FILE singe_cycle_tb1.v
 set_global_assignment -name VERILOG_FILE single_cycle_tb1.v
 set_global_assignment -name EDA_TEST_BENCH_NAME single_cycle_tb1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id single_cycle_tb1

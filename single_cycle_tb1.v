@@ -34,10 +34,10 @@ module single_cycle_tb1;
     $display("Running through the 15 instructions...");
     
     // Wait for the processor to execute all instructions
-    #100; // You may need to adjust this delay depending on your clock and instructions
+    #200; // You may need to adjust this delay depending on your clock and instructions
 
     // End of test
-    $finish;
+    $stop;
   end
   
     

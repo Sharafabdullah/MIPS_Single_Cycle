@@ -8,301 +8,301 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/User/Desktop/MIPS_Single_Cycle-main/simulation/modelsim
+Z0 dC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/simulation/modelsim
 vAdder
-!s110 1732039872
+Z1 !s110 1732330745
 !i10b 1
 !s100 Th=X80flA7b5B5j2JlS@51
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IL=1^j3^e90gV;4><mHJEo2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IY29598J=1nmB6Re39>kjj2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1731942701
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v
 !i122 0
-Z3 L0 1 12
-Z4 OV;L;2020.1;71
+Z4 L0 1 12
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1732039872.000000
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/Adder.v|
+Z6 !s108 1732330745.000000
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/Adder.v|
 !i113 1
-Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main
-Z7 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code}
+Z9 tCvgOpt 0
 n@adder
 vALU
-Z8 !s110 1732039875
+Z10 !s110 1732330746
 !i10b 1
 !s100 CX8CWzPBZ:RT8;A9S7=EM2
-R1
-IgFMOnCgb7ocA4z1DliEYh1
 R2
+IK6ok0k_LhkYV1KbH0ITYn3
+R3
 R0
-w1731863657
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v
+w1732041887
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v
 !i122 9
 L0 1 42
-R4
+R5
 r1
 !s85 0
 31
-Z9 !s108 1732039874.000000
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/ALU.v|
+Z11 !s108 1732330746.000000
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ALU.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@a@l@u
 vControlUnit
-Z10 !s110 1732039874
+R10
 !i10b 1
-!s100 @L^;>b<RXLOZC2dT?nQ5?0
-R1
-I^CmMW?S7f:MWWClEdRV7=1
+!s100 K9H]lP91JiL]S?7Q3?Fhn0
 R2
+I89>BQkdMb<XO1gzz[H^CG0
+R3
 R0
-w1731942527
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v
+w1732204889
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v
 !i122 4
-L0 1 243
-R4
+L0 1 245
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/ControlUnit.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ControlUnit.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@control@unit
 vDataMem
-R8
+Z12 !s110 1732330747
 !i10b 1
 !s100 TzK3?RDAJ<FK=^nKGe6PS1
-R1
-Ii9Y^`ehMoDPAeNaM=;zmG2
 R2
+IzKa99k>KMO`<7^ifX4ecl1
+R3
 R0
-Z11 w1731788528
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v
+Z13 w1731788528
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v
 !i122 10
 L0 40 69
-R4
+R5
 r1
 !s85 0
 31
-Z12 !s108 1732039875.000000
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/DataMem.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/DataMem.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@data@mem
 vInstMem
 R10
 !i10b 1
 !s100 kCP5`magI?kK]kIUkKL7D1
-R1
-IT:SXdLa[[5ED28:2h0g7U2
 R2
+I_93T?[@[PQ>[YhXYz?:OO1
+R3
 R0
 w1731950360
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v
 !i122 3
 L0 40 62
-R4
+R5
 r1
 !s85 0
 31
-Z13 !s108 1732039873.000000
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/InstMem.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/InstMem.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@inst@mem
 vmux2X1
 R10
 !i10b 1
 !s100 m3HHmVL>fUP^nEIN9i9CS3
-R1
-INn46:LimP::PH8P=DmdS^2
 R2
+I:6SzhEz^1z_LB^od81LXW1
+R3
 R0
-w1731942609
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v
+w1732041814
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v
 !i122 5
 Z14 L0 1 13
-R4
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux2X1.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux2X1.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 nmux2@x1
 vmux4x1
 R10
 !i10b 1
 !s100 gRgUH3757JfBZAY>61cX93
-R1
-IQ9g`5j9A21RmD6ioXImU<0
 R2
+IdDl^90GCOFdET=XzzVdI?1
+R3
 R0
-w1731942541
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v
+w1732041899
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v
 !i122 8
 R14
-R4
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/mux4x1.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/mux4x1.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 vProgramCounter
-Z15 !s110 1732039873
+R1
 !i10b 1
 !s100 _[IlQ067jejS;agf;oM[b2
-R1
-IA0M<mNkTlH3Ub83U2f:?63
 R2
+IOEcA[@4G391];GOVOQ@lN3
+R3
 R0
-R11
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v
+R13
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v
 !i122 1
 L0 1 24
-R4
+R5
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/ProgramCounter.v|
-!i113 1
-R5
 R6
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/ProgramCounter.v|
+!i113 1
 R7
+R8
+R9
 n@program@counter
 vRegisterFile
 R10
 !i10b 1
-!s100 lI9]HLlj3XH5f9IEeVOHG1
-R1
-I:OolOeYN>R:]GIYJCTozT1
+!s100 =@6=PU[CcaRlRPM??5nW:3
 R2
+I>4>NXPZOH1o?nl75cEml52
+R3
 R0
-w1731942638
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v
+w1732328407
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v
 !i122 6
-L0 1 49
-R4
+L0 1 51
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/RegisterFile.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/RegisterFile.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@register@file
 vSignExtender
 R10
 !i10b 1
 !s100 dh5I5TlVN>TLR0kP7Y[4>2
-R1
-IGVOK3H88E=eAz2cPlVn<>1
 R2
+II@mRC7CM^f1lnlKDk:4cU0
+R3
 R0
 w1731863654
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v
 !i122 7
-R3
 R4
+R5
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/SignExtender.v|
+R11
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/SignExtender.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@sign@extender
 vsingle_cycle
-R15
-!i10b 1
-!s100 M[lgBN97cl1Z7CFc?3GcB0
 R1
-Ic57IP0C?f@99=CGQ1^Qk72
+!i10b 1
+!s100 Qnm?mQa=52CM46DSAQC7Y0
 R2
+IoaGVFI6A@hjj^@^>Sk0ia3
+R3
 R0
-w1732039427
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v
+w1732330299
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v
 !i122 2
 L0 1 220
-R4
+R5
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle.v|
-!i113 1
-R5
 R6
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle.v|
+!i113 1
 R7
-vsingle_cycle_tb1
 R8
+R9
+vsingle_cycle_tb1
+R12
 !i10b 1
-!s100 A4I=k5F_4Q5<C<^4jbMSG1
-R1
-IK4=^?C[haR9Qe5Zgj>54M0
+!s100 :2YWneKDH8N0QQJFOZT:h3
 R2
+I0aPH9ZHRL2=KiU0K3GC^[3
+R3
 R0
-w1731956213
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v
+w1732328890
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v
 !i122 11
 L0 3 47
-R4
+R5
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v|
+!s108 1732330747.000000
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
 !i113 1
-R5
-R6
 R7
+R8
+R9

@@ -6,29 +6,24 @@ module single_cycle(clk,
     input clk, rst;
     
     //!PC 0x0000 - 0xFFFF
-    //to change to plus 4: 
-    // PCPlus1 -> PCPlus4
-    // fix JAddr
-    // fix pcAdder
-    // fix instMem
-    // fix in PCmux
-    output [15:0] PC;
-    wire [15:0] nextPC, PCPlus4, PCPlus1; 
+
+    output [31:0] PC;
+    wire [31:0] nextPC, PCPlus1; 
     
     wire [31:0] Instruction, WrData, RdData1, RdData2, ExtImm,ALUin1, ALUin2, ALURes, MemRdData;
     wire [15:0] Imm;
 
     //!Changed AdderResult -> BranchAddr and changed to match PC
     wire [5:0] OpCode, Funct;
-    wire [15:0] BranchAddr;
+    wire [31:0] BranchAddr;
     wire [4:0] rs, rt, rd, WrReg, shamt; //! added shamt
     wire [3:0] ALUOp; //!changed to 4 bits
 
-    wire [15:0] JAddr, JRAddr;
+    wire [31:0] JAddr, JRAddr;
     // assign JAddr = {Instruction[13:0], 2'b00}; // J const
 
-    assign JAddr = {Instruction[15:0]}; // J const
-    assign JRAddr = RdData1[15:0]; // This first 16 bits of rs 
+    assign JAddr = Instruction[25:0]; // J const
+    assign JRAddr = RdData1[31:0]; // The bits read from $rs
 
     wire RegDst, MemRdEn, MemtoReg, MemWrEn, RegWrEn,ALUSrc1, ALUSrc2, zero, Jump, JumpReg, BranchEq, BranchNeq; //! Added ALUSrc1, Jump, JumpReg, removed Branch and added BranchEq & BranchNeq
 
@@ -47,7 +42,7 @@ module single_cycle(clk,
     
     wire PCEn; //!Added Enable to the PC so that we can halt the CPU
     assign PCEn = 1;
-    ProgramCounter	 pc(
+    ProgramCounter  pc(
     .clk(clk),
     .rst(rst),
     .PCEn(PCEn),
@@ -56,16 +51,12 @@ module single_cycle(clk,
     );
     
     //Add 4 if it is byte addressed / 1 if it is word addressed
-    Adder #(.size(16)) PCAdder(
+    Adder #(.size(32)) PCAdder(
     .in1(PC),
-    .in2(16'b1), ////!!!!
+    .in2(32'b1), ////!!!!
     .out(PCPlus1)
     );
     
-    //Changed instMem name and it is 4 word one byte each
-    //what should be done when the address is not aligned ? 
-    // how to fetch 4 bytes in one cycle? - prefetch using fifo or 
-    // dividing the memory into 4 and assembling in one cycle
     InstMem IM(
     .address(PC),
     .clock(clk),
@@ -129,7 +120,7 @@ module single_cycle(clk,
     //! Added mux
     mux2X1 #(32) ALUMux1_(
         .in1(RdData1),
-        .in2({27'b0,shamt}),             //19-11 first bug - shamt must be extended             
+        .in2({27'b0,shamt}), //19-11 first bug - shamt must be extended             
         .s(ALUSrc1), 
         .out(ALUin1)
     );
@@ -158,7 +149,7 @@ module single_cycle(clk,
         if(InvalidInst) begin
             PCsrc = 2'b00;
         end
-        if(BranchTaken) begin
+        else if(BranchTaken) begin
             PCsrc = 2'b01;
         end
         else if(Jump) begin
@@ -172,14 +163,10 @@ module single_cycle(clk,
         end
     end
 
-    // ANDGate branchAnd(
-    // .in1(zero),
-    // .in2(Branch),
-    // .out(PCsrc));
     
-    Adder #(16) branchAdder_(
+    Adder #(32) branchAdder_(
     .in1(PCPlus1),
-    .in2(Imm[15:0]),
+    .in2(ExtImm), //changes to ExtImm
     .out(BranchAddr)
     );
     
@@ -207,7 +194,7 @@ module single_cycle(clk,
     .out(WrData)
     );
     
-    mux4x1 #(16) PCMux_(
+    mux4x1 #(32) PCMux_(
     .in1(PCPlus1),
     .in2(BranchAddr),
     .in3(JAddr),

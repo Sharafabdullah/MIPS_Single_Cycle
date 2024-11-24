@@ -10,40 +10,42 @@ module RegisterFile (
     RdData2
 );
     
-    // inputs
+    // Inputs
     input wire clk, rst, WrEn;
     input wire [4:0] RdReg1, RdReg2, WrReg;
     input wire [31:0] WrData;
     
-    // outputs
+    // Outputs
     output reg [31:0] RdData1, RdData2;
     
-    // register file (registers)
+    // Register file (32 registers of 32 bits each)
     reg [31:0] registers [0:31];
 
-    localparam zero = 0, at = 1, gp = 28, sp = 29, fp = 30, ra = 31;
-    localparam v0 = 2, v1 = 3, a0 = 4, a1= 5, a2 = 6, a3 = 7;
-    localparam t0 = 8, t1 = 9, t2 = 10, t3= 11, t4 = 12, t5 = 13, t6= 14, t7 = 15;
-    localparam s0 = 16, s1 = 17, s2 = 18, s3= 19, s4 = 20, s5 = 21, s6= 22, s7 = 23;
-    localparam t8 = 24, t9 = 25, k0 = 26, k1 = 27;
-
-    // Read from the register file
+    // Read from the register file with bypass logic
     always @(*) begin
-        RdData1 = registers[RdReg1];
-        RdData2 = registers[RdReg2];
+        // Read port 1
+        if (WrEn && (WrReg == RdReg1) && (WrReg != 5'b00000)) 
+            RdData1 = WrData; // Forward write data if RAW hazard
+        else
+            RdData1 = (RdReg1 == 5'b00000) ? 32'b0 : registers[RdReg1];
+
+        // Read port 2
+        if (WrEn && (WrReg == RdReg2) && (WrReg != 5'b00000)) 
+            RdData2 = WrData; // Forward write data if RAW hazard
+        else
+            RdData2 = (RdReg2 == 5'b00000) ? 32'b0 : registers[RdReg2];
     end
     
-    // Active-high synchronous reset
-    always @(posedge clk or posedge rst) begin : Write_on_register_file_block
+    // Write to the register file with synchronous reset
+    always @(posedge clk) begin : Write_on_register_file_block
         integer i;
-        
         if (rst) begin
             for (i = 0; i < 32; i = i + 1) begin
-                registers[i] <= 0; // Reset all registers
+                registers[i] <= 0; // Reset all registers to 0
             end
-        end else if (WrEn && WrReg != 5'b00000) begin // Prevent writing to register 0
-            registers[WrReg] <= WrData;
+        end else if (WrEn && WrReg != 5'b00000) begin
+            registers[WrReg] <= WrData; // Write to the register if WrEn is asserted and not R0
         end
     end
-    
+
 endmodule

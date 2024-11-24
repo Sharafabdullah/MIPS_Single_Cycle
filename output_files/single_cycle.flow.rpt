@@ -1,5 +1,5 @@
 Flow report for single_cycle
-Tue Nov 19 20:55:17 2024
+Sat Nov 23 05:58:34 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 19 20:55:17 2024       ;
+; Flow Status                        ; Successful - Sat Nov 23 05:58:34 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; single_cycle                                ;
 ; Top-level Entity Name              ; single_cycle                                ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,502                                       ;
-;     Total combinational functions  ; 2,511                                       ;
+; Total logic elements               ; 3,578                                       ;
+;     Total combinational functions  ; 2,587                                       ;
 ;     Dedicated logic registers      ; 1,160                                       ;
 ; Total registers                    ; 1160                                        ;
 ; Total pins                         ; 18                                          ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/19/2024 20:54:33 ;
+; Start date & time ; 11/23/2024 05:57:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; single_cycle        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 141623899977103.173203887223252        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 194042953849220.173233067522520        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; single_cycle_tb1                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CU_tb                             ;
@@ -123,8 +123,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 4838 MB             ; 00:00:39                           ;
-; Total                ; 00:00:46     ; --                      ; --                  ; 00:00:39                           ;
+; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 4905 MB             ; 00:00:43                           ;
+; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -133,7 +133,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; XX-laptop        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-32LU2OU  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
