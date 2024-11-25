@@ -172,11 +172,19 @@ module single_cycle(clk,
     
     DataMem DM_(
     .address(ALURes[9:0]), //! 1k words - 4kB
-    .clock(clk), .data(RdData2),
+    .inclock(~clk), .data(RdData2),
     .rden(MemRdEn),
     .wren(MemWrEn),
     .q(MemRdData)
     );
+	 
+
+    // DataMem DM_(
+	// .address(ALURes[9:0]),
+	// .data(RdData2),
+	// .inclock(clk),
+	// .we(MemWrEn),
+	// .q(MemRdData));
     
     wire [31:0] WrDataInter;
     mux2X1 #(32) WBMux1_(
@@ -189,7 +197,7 @@ module single_cycle(clk,
     //! Added if there is JAL 
     mux2X1 #(32) WBMux2_(
     .in1(WrDataInter), 
-    .in2(nextPC),
+    .in2(PCPlus1),
     .s(Jump & RegWrEn),
     .out(WrData)
     );

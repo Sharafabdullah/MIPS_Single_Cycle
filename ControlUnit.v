@@ -103,6 +103,16 @@ module ControlUnit(
                         ALUSrc1 = 1'b1;
                         ALUOp = 4'b1000;
                     end
+
+                    _jr : begin
+                        MemRdEn = 1'b0;
+                        ALUOp   = 4'b1111;
+                        Jump = 1'b0; //! 
+                        JumpReg = 1'b1; //! This will be used to set PCsrc = 'b11
+                        MemWrEn = 1'b0;
+                        RegWrEn = 1'b0;
+                        ALUSrc2  = 1'b0; 
+                    end
                     
                     default: begin
                         ALUOp = 4'b1111;
@@ -212,15 +222,7 @@ module ControlUnit(
                 RegWrEn = 1'b0;
                 ALUSrc2  = 1'b0; 
             end
-            _jr : begin
-                MemRdEn = 1'b0;
-                ALUOp   = 4'b1111;
-                Jump = 1'b0; //! 
-                JumpReg = 1'b1; //! This will be used to set PCsrc = 'b11
-                MemWrEn = 1'b0;
-                RegWrEn = 1'b0;
-                ALUSrc2  = 1'b0; 
-            end
+            
             _jal : begin
                 MemRdEn = 1'b0;
                 ALUOp   = 4'b1111;

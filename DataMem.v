@@ -39,22 +39,22 @@
 // synopsys translate_on
 module DataMem (
 	address,
-	clock,
 	data,
+	inclock,
 	rden,
 	wren,
 	q);
 
 	input	[9:0]  address;
-	input	  clock;
 	input	[31:0]  data;
+	input	  inclock;
 	input	  rden;
 	input	  wren;
 	output	[31:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1	  clock;
+	tri1	  inclock;
 	tri1	  rden;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
@@ -65,7 +65,7 @@ module DataMem (
 
 	altsyncram	altsyncram_component (
 				.address_a (address),
-				.clock0 (clock),
+				.clock0 (inclock),
 				.data_a (data),
 				.rden_a (rden),
 				.wren_a (wren),
@@ -138,7 +138,7 @@ endmodule
 // Retrieval info: PRIVATE: RegData NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "1"
-// Retrieval info: PRIVATE: SingleClock NUMERIC "1"
+// Retrieval info: PRIVATE: SingleClock NUMERIC "0"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "1"
 // Retrieval info: PRIVATE: WRCONTROL_ACLR_A NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "10"
@@ -162,13 +162,13 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "32"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 // Retrieval info: USED_PORT: address 0 0 10 0 INPUT NODEFVAL "address[9..0]"
-// Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
+// Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT VCC "inclock"
 // Retrieval info: USED_PORT: q 0 0 32 0 OUTPUT NODEFVAL "q[31..0]"
 // Retrieval info: USED_PORT: rden 0 0 0 0 INPUT VCC "rden"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT NODEFVAL "wren"
 // Retrieval info: CONNECT: @address_a 0 0 10 0 address 0 0 10 0
-// Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
+// Retrieval info: CONNECT: @clock0 0 0 0 0 inclock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 32 0 data 0 0 32 0
 // Retrieval info: CONNECT: @rden_a 0 0 0 0 rden 0 0 0 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0

@@ -4,7 +4,7 @@ module ALU (operand1, operand2, opSel, result, zero);
     parameter sel_width = 4;
     
     // Inputs
-    input [data_width - 1 : 0] operand1, operand2;
+    input signed [data_width - 1 : 0] operand1, operand2;
     input [sel_width - 1 : 0] opSel;
     
     // Outputs
