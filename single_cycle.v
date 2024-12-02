@@ -22,7 +22,7 @@ module single_cycle(clk,
     wire [31:0] JAddr, JRAddr;
     // assign JAddr = {Instruction[13:0], 2'b00}; // J const
 
-    assign JAddr = Instruction[25:0]; // J const
+    assign JAddr = {PCPlus1[31:26], Instruction[25:0]};
     assign JRAddr = RdData1[31:0]; // The bits read from $rs
 
     wire RegDst, MemRdEn, MemtoReg, MemWrEn, RegWrEn,ALUSrc1, ALUSrc2, zero, Jump, JumpReg, BranchEq, BranchNeq; //! Added ALUSrc1, Jump, JumpReg, removed Branch and added BranchEq & BranchNeq
