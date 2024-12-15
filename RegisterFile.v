@@ -9,7 +9,6 @@ module RegisterFile (
     RdData1,
     RdData2
 );
-    
     // Inputs
     input wire clk, rst, WrEn;
     input wire [4:0] RdReg1, RdReg2, WrReg;

@@ -1,7 +1,7 @@
-module ProgramCounter (clk, rst,PCEn, PCin, PCout);
+module ProgramCounter (clk, rst, PCin, PCout);
 	
 	//inputs
-	input clk, rst, PCEn;
+	input clk, rst;
 	input [31:0] PCin;
 	
 	//outputs 
@@ -10,14 +10,7 @@ module ProgramCounter (clk, rst,PCEn, PCin, PCout);
 	//Counter logic - sync active high rst
 	always@(posedge clk) begin
 		if(rst) begin
-			PCout <= 32'hFFFFFFFF;
-		end
-		//if there is an error - go to 0x0000 where exception
-		else if(~PCEn) begin
-			PCout <= 32'h000000FF;
-		end
-		else if(PCin == 32'h00000FFF)begin
-			PCout <= 32'h00000000;
+			PCout <= 32'hffffffff;
 		end
 		else begin
 			PCout <= PCin;

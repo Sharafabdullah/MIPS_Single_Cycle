@@ -1,0 +1,768 @@
+$date
+	Sun Dec 15 14:49:47 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module RegisterFile_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # WrEn $end
+$var reg 5 $ RdReg1 [4:0] $end
+$var reg 5 % RdReg2 [4:0] $end
+$var reg 5 & WrReg [4:0] $end
+$var reg 32 ' WrData [31:0] $end
+$var wire 1 ( RdData1 [31] $end
+$var wire 1 ) RdData1 [30] $end
+$var wire 1 * RdData1 [29] $end
+$var wire 1 + RdData1 [28] $end
+$var wire 1 , RdData1 [27] $end
+$var wire 1 - RdData1 [26] $end
+$var wire 1 . RdData1 [25] $end
+$var wire 1 / RdData1 [24] $end
+$var wire 1 0 RdData1 [23] $end
+$var wire 1 1 RdData1 [22] $end
+$var wire 1 2 RdData1 [21] $end
+$var wire 1 3 RdData1 [20] $end
+$var wire 1 4 RdData1 [19] $end
+$var wire 1 5 RdData1 [18] $end
+$var wire 1 6 RdData1 [17] $end
+$var wire 1 7 RdData1 [16] $end
+$var wire 1 8 RdData1 [15] $end
+$var wire 1 9 RdData1 [14] $end
+$var wire 1 : RdData1 [13] $end
+$var wire 1 ; RdData1 [12] $end
+$var wire 1 < RdData1 [11] $end
+$var wire 1 = RdData1 [10] $end
+$var wire 1 > RdData1 [9] $end
+$var wire 1 ? RdData1 [8] $end
+$var wire 1 @ RdData1 [7] $end
+$var wire 1 A RdData1 [6] $end
+$var wire 1 B RdData1 [5] $end
+$var wire 1 C RdData1 [4] $end
+$var wire 1 D RdData1 [3] $end
+$var wire 1 E RdData1 [2] $end
+$var wire 1 F RdData1 [1] $end
+$var wire 1 G RdData1 [0] $end
+$var wire 1 H RdData2 [31] $end
+$var wire 1 I RdData2 [30] $end
+$var wire 1 J RdData2 [29] $end
+$var wire 1 K RdData2 [28] $end
+$var wire 1 L RdData2 [27] $end
+$var wire 1 M RdData2 [26] $end
+$var wire 1 N RdData2 [25] $end
+$var wire 1 O RdData2 [24] $end
+$var wire 1 P RdData2 [23] $end
+$var wire 1 Q RdData2 [22] $end
+$var wire 1 R RdData2 [21] $end
+$var wire 1 S RdData2 [20] $end
+$var wire 1 T RdData2 [19] $end
+$var wire 1 U RdData2 [18] $end
+$var wire 1 V RdData2 [17] $end
+$var wire 1 W RdData2 [16] $end
+$var wire 1 X RdData2 [15] $end
+$var wire 1 Y RdData2 [14] $end
+$var wire 1 Z RdData2 [13] $end
+$var wire 1 [ RdData2 [12] $end
+$var wire 1 \ RdData2 [11] $end
+$var wire 1 ] RdData2 [10] $end
+$var wire 1 ^ RdData2 [9] $end
+$var wire 1 _ RdData2 [8] $end
+$var wire 1 ` RdData2 [7] $end
+$var wire 1 a RdData2 [6] $end
+$var wire 1 b RdData2 [5] $end
+$var wire 1 c RdData2 [4] $end
+$var wire 1 d RdData2 [3] $end
+$var wire 1 e RdData2 [2] $end
+$var wire 1 f RdData2 [1] $end
+$var wire 1 g RdData2 [0] $end
+$var integer 32 h test_case $end
+
+$scope module dut $end
+$var wire 1 i clk $end
+$var wire 1 j rst $end
+$var wire 1 k WrEn $end
+$var wire 1 l RdReg1 [4] $end
+$var wire 1 m RdReg1 [3] $end
+$var wire 1 n RdReg1 [2] $end
+$var wire 1 o RdReg1 [1] $end
+$var wire 1 p RdReg1 [0] $end
+$var wire 1 q RdReg2 [4] $end
+$var wire 1 r RdReg2 [3] $end
+$var wire 1 s RdReg2 [2] $end
+$var wire 1 t RdReg2 [1] $end
+$var wire 1 u RdReg2 [0] $end
+$var wire 1 v WrReg [4] $end
+$var wire 1 w WrReg [3] $end
+$var wire 1 x WrReg [2] $end
+$var wire 1 y WrReg [1] $end
+$var wire 1 z WrReg [0] $end
+$var wire 1 { WrData [31] $end
+$var wire 1 | WrData [30] $end
+$var wire 1 } WrData [29] $end
+$var wire 1 ~ WrData [28] $end
+$var wire 1 !! WrData [27] $end
+$var wire 1 "! WrData [26] $end
+$var wire 1 #! WrData [25] $end
+$var wire 1 $! WrData [24] $end
+$var wire 1 %! WrData [23] $end
+$var wire 1 &! WrData [22] $end
+$var wire 1 '! WrData [21] $end
+$var wire 1 (! WrData [20] $end
+$var wire 1 )! WrData [19] $end
+$var wire 1 *! WrData [18] $end
+$var wire 1 +! WrData [17] $end
+$var wire 1 ,! WrData [16] $end
+$var wire 1 -! WrData [15] $end
+$var wire 1 .! WrData [14] $end
+$var wire 1 /! WrData [13] $end
+$var wire 1 0! WrData [12] $end
+$var wire 1 1! WrData [11] $end
+$var wire 1 2! WrData [10] $end
+$var wire 1 3! WrData [9] $end
+$var wire 1 4! WrData [8] $end
+$var wire 1 5! WrData [7] $end
+$var wire 1 6! WrData [6] $end
+$var wire 1 7! WrData [5] $end
+$var wire 1 8! WrData [4] $end
+$var wire 1 9! WrData [3] $end
+$var wire 1 :! WrData [2] $end
+$var wire 1 ;! WrData [1] $end
+$var wire 1 <! WrData [0] $end
+$var wire 1 ( RdData1 [31] $end
+$var wire 1 ) RdData1 [30] $end
+$var wire 1 * RdData1 [29] $end
+$var wire 1 + RdData1 [28] $end
+$var wire 1 , RdData1 [27] $end
+$var wire 1 - RdData1 [26] $end
+$var wire 1 . RdData1 [25] $end
+$var wire 1 / RdData1 [24] $end
+$var wire 1 0 RdData1 [23] $end
+$var wire 1 1 RdData1 [22] $end
+$var wire 1 2 RdData1 [21] $end
+$var wire 1 3 RdData1 [20] $end
+$var wire 1 4 RdData1 [19] $end
+$var wire 1 5 RdData1 [18] $end
+$var wire 1 6 RdData1 [17] $end
+$var wire 1 7 RdData1 [16] $end
+$var wire 1 8 RdData1 [15] $end
+$var wire 1 9 RdData1 [14] $end
+$var wire 1 : RdData1 [13] $end
+$var wire 1 ; RdData1 [12] $end
+$var wire 1 < RdData1 [11] $end
+$var wire 1 = RdData1 [10] $end
+$var wire 1 > RdData1 [9] $end
+$var wire 1 ? RdData1 [8] $end
+$var wire 1 @ RdData1 [7] $end
+$var wire 1 A RdData1 [6] $end
+$var wire 1 B RdData1 [5] $end
+$var wire 1 C RdData1 [4] $end
+$var wire 1 D RdData1 [3] $end
+$var wire 1 E RdData1 [2] $end
+$var wire 1 F RdData1 [1] $end
+$var wire 1 G RdData1 [0] $end
+$var wire 1 H RdData2 [31] $end
+$var wire 1 I RdData2 [30] $end
+$var wire 1 J RdData2 [29] $end
+$var wire 1 K RdData2 [28] $end
+$var wire 1 L RdData2 [27] $end
+$var wire 1 M RdData2 [26] $end
+$var wire 1 N RdData2 [25] $end
+$var wire 1 O RdData2 [24] $end
+$var wire 1 P RdData2 [23] $end
+$var wire 1 Q RdData2 [22] $end
+$var wire 1 R RdData2 [21] $end
+$var wire 1 S RdData2 [20] $end
+$var wire 1 T RdData2 [19] $end
+$var wire 1 U RdData2 [18] $end
+$var wire 1 V RdData2 [17] $end
+$var wire 1 W RdData2 [16] $end
+$var wire 1 X RdData2 [15] $end
+$var wire 1 Y RdData2 [14] $end
+$var wire 1 Z RdData2 [13] $end
+$var wire 1 [ RdData2 [12] $end
+$var wire 1 \ RdData2 [11] $end
+$var wire 1 ] RdData2 [10] $end
+$var wire 1 ^ RdData2 [9] $end
+$var wire 1 _ RdData2 [8] $end
+$var wire 1 ` RdData2 [7] $end
+$var wire 1 a RdData2 [6] $end
+$var wire 1 b RdData2 [5] $end
+$var wire 1 c RdData2 [4] $end
+$var wire 1 d RdData2 [3] $end
+$var wire 1 e RdData2 [2] $end
+$var wire 1 f RdData2 [1] $end
+$var wire 1 g RdData2 [0] $end
+
+$scope begin named_block $end
+$var integer 32 =! i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+b0 $
+b0 %
+b0 &
+b0 '
+b1 h
+bx =!
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+xg
+xf
+xe
+xd
+xc
+xb
+xa
+x`
+x_
+x^
+x]
+x\
+x[
+xZ
+xY
+xX
+xW
+xV
+xU
+xT
+xS
+xR
+xQ
+xP
+xO
+xN
+xM
+xL
+xK
+xJ
+xI
+xH
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+05!
+04!
+03!
+02!
+01!
+00!
+0/!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+1j
+0i
+$end
+#5000
+1!
+1i
+b0 =!
+b1 =!
+b10 =!
+b11 =!
+b100 =!
+b101 =!
+b110 =!
+b111 =!
+b1000 =!
+b1001 =!
+b1010 =!
+b1011 =!
+b1100 =!
+b1101 =!
+b1110 =!
+b1111 =!
+b10000 =!
+b10001 =!
+b10010 =!
+b10011 =!
+b10100 =!
+b10101 =!
+b10110 =!
+b10111 =!
+b11000 =!
+b11001 =!
+b11010 =!
+b11011 =!
+b11100 =!
+b11101 =!
+b11110 =!
+b11111 =!
+b100000 =!
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+#6000
+b11111 $
+b10000 %
+1q
+1p
+1o
+1n
+1m
+1l
+#7000
+0"
+b10 h
+0j
+#10000
+0!
+0i
+#15000
+1!
+1i
+1#
+b101 &
+b10100101101001011010010110100101 '
+1k
+1<!
+1:!
+17!
+15!
+14!
+12!
+1/!
+1-!
+1,!
+1*!
+1'!
+1%!
+1$!
+1"!
+1}
+1{
+1z
+1x
+#20000
+0!
+0i
+#25000
+1!
+1i
+b1010 &
+b1011010010110100101101001011010 '
+0<!
+1;!
+0:!
+19!
+18!
+07!
+16!
+05!
+04!
+13!
+02!
+11!
+10!
+0/!
+1.!
+0-!
+0,!
+1+!
+0*!
+1)!
+1(!
+0'!
+1&!
+0%!
+0$!
+1#!
+0"!
+1!!
+1~
+0}
+1|
+0{
+0z
+1y
+0x
+1w
+#30000
+0!
+0i
+#35000
+1!
+1i
+0#
+b101 $
+b1010 %
+0k
+1t
+1r
+0q
+0o
+0m
+0l
+1G
+1E
+1B
+1@
+1?
+1=
+1:
+18
+17
+15
+12
+10
+1/
+1-
+1*
+1(
+1f
+1d
+1c
+1a
+1^
+1\
+1[
+1Y
+1V
+1T
+1S
+1Q
+1N
+1L
+1K
+1I
+#36000
+b11 h
+#40000
+0!
+0i
+#45000
+1!
+1i
+1#
+b0 &
+b11111111111111111111111111111111 '
+1k
+1<!
+1:!
+17!
+15!
+14!
+12!
+1/!
+1-!
+1,!
+1*!
+1'!
+1%!
+1$!
+1"!
+1}
+1{
+0y
+0w
+#50000
+0!
+0i
+#55000
+1!
+1i
+0#
+b0 $
+0k
+0p
+0n
+0G
+0E
+0B
+0@
+0?
+0=
+0:
+08
+07
+05
+02
+00
+0/
+0-
+0*
+0(
+#56000
+b100 h
+#60000
+0!
+0i
+#65000
+1!
+1i
+b1111 &
+b10101010101010101010101010101010 '
+0<!
+0:!
+08!
+06!
+04!
+02!
+00!
+0.!
+0,!
+0*!
+0(!
+0&!
+0$!
+0"!
+0~
+0|
+1z
+1y
+1x
+1w
+#70000
+0!
+0i
+#75000
+1!
+1i
+b1111 $
+1p
+1o
+1n
+1m
+#76000
+b101 h
+#80000
+0!
+0i
+#85000
+1!
+1i
+1#
+b10100 &
+b10010001101000101011001111000 '
+b10100 $
+b10100 %
+1k
+0t
+1s
+0r
+1q
+0p
+0o
+0m
+1l
+0;!
+18!
+16!
+05!
+12!
+01!
+10!
+0/!
+1.!
+0-!
+0+!
+1*!
+0)!
+1(!
+0%!
+0!!
+1~
+0}
+0{
+0z
+0y
+0w
+1v
+0f
+0d
+0c
+0a
+0^
+0\
+0[
+0Y
+0V
+0T
+0S
+0Q
+0N
+0L
+0K
+0I
+#90000
+0!
+0i
+#95000
+1!
+1i
+1D
+1C
+1B
+1A
+1>
+1=
+1;
+19
+15
+13
+12
+1.
+1+
+1d
+1c
+1b
+1a
+1^
+1]
+1[
+1Y
+1U
+1S
+1R
+1N
+1K
+#100000
+0!
+0i
+#105000
+1!
+1i
+#110000
+0!
+0i
+#115000
+1!
+1i

@@ -8,7 +8,8 @@ module single_cycle(clk,
     //!PC 0x0000 - 0xFFFF
 
     output [31:0] PC;
-    wire [31:0] nextPC, PCPlus1; 
+    reg [31:0] nextPC;
+	 wire [31:0] PCPlus1; 
     
     wire [31:0] Instruction, WrData, RdData1, RdData2, ExtImm,ALUin1, ALUin2, ALURes, MemRdData;
     wire [15:0] Imm;
@@ -27,8 +28,9 @@ module single_cycle(clk,
 
     wire RegDst, MemRdEn, MemtoReg, MemWrEn, RegWrEn,ALUSrc1, ALUSrc2, zero, Jump, JumpReg, BranchEq, BranchNeq; //! Added ALUSrc1, Jump, JumpReg, removed Branch and added BranchEq & BranchNeq
 
-    wire BranchTaken, InvalidInst; //added to ensure there is no errors
-    reg [1:0] PCsrc; //changed to 2 bits - it's reg to allow always block - not a reg
+    wire BranchTaken, InvalidInst, MemoryOutOfBounds, Overflow;
+    reg Exception; //added to ensure there is no errors
+    reg [2:0] PCsrc; //changed to 2 bits - it's reg to allow always block - not a reg
     
     assign OpCode = Instruction[31:26];
     assign rs     = Instruction[25:21];
@@ -39,13 +41,16 @@ module single_cycle(clk,
     assign Imm   = Instruction[15:0];
     assign Funct = Instruction[5:0];
     assign shamt = Instruction[10:6]; 
-    
-    wire PCEn; //!Added Enable to the PC so that we can halt the CPU
-    assign PCEn = 1;
+
+   assign MemoryOutOfBounds = (MemRdEn || MemWrEn) && (ALURes>10'h3ff);
+//    assign Exception = InvalidInst || MemoryOutOfBounds || Overflow;
+    always @(posedge clk) begin
+        if(rst) Exception = 1'b0;
+        else if(PC != 32'hffffffff) Exception = InvalidInst || MemoryOutOfBounds || Overflow;
+    end
     ProgramCounter  pc(
     .clk(clk),
     .rst(rst),
-    .PCEn(PCEn),
     .PCin(nextPC),
     .PCout(PC)
     );
@@ -137,6 +142,7 @@ module single_cycle(clk,
     .operand2(ALUin2),
     .opSel(ALUOp),
     .result(ALURes),
+    .overflow(Overflow),
     .zero(zero)
     );
     
@@ -145,21 +151,21 @@ module single_cycle(clk,
 
     //Determine PCsrc
     always @(*) begin
-        PCsrc = 2'b00;
-        if(InvalidInst) begin
-            PCsrc = 2'b00;
+        PCsrc = 3'b000;
+        if(Exception) begin
+            PCsrc = 3'b111;
         end
         else if(BranchTaken) begin
-            PCsrc = 2'b01;
+            PCsrc = 3'b001;
         end
         else if(Jump) begin
-            PCsrc = 2'b10;
+            PCsrc = 3'b010;
         end
         else if(JumpReg) begin
-            PCsrc = 2'b11;
+            PCsrc = 3'b011;
         end
         else begin
-            PCsrc = 2'b00;
+            PCsrc = 3'b000;
         end
     end
 
@@ -202,14 +208,23 @@ module single_cycle(clk,
     .out(WrData)
     );
     
-    mux4x1 #(32) PCMux_(
-    .in1(PCPlus1),
-    .in2(BranchAddr),
-    .in3(JAddr),
-    .in4(JRAddr),
-    .s(PCsrc),
-    .out(nextPC)
-    );
+    // mux4x1 #(32) PCMux_(
+    // .in1(PCPlus1),
+    // .in2(BranchAddr),
+    // .in3(JAddr),
+    // .in4(JRAddr),
+    // .s(PCsrc),
+    // .out(nextPC)
+    // );
+    always @(*) begin
+        case(PCsrc)
+            3'b000: nextPC <= PCPlus1;
+            3'b001: nextPC <= BranchAddr;
+            3'b010: nextPC <= JAddr;
+            3'b011: nextPC <= JRAddr;
+            3'b111: nextPC <= 32'h000003f0;
+        endcase
+    end
     
     
 endmodule

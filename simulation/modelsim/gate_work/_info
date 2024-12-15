@@ -8,52 +8,76 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/User/Desktop/MIPS_Single_Cycle-main/simulation/modelsim
-vsingle_cycle
-Z1 !s110 1731972044
+Z0 dC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/simulation/modelsim
+vhard_block
+Z1 !s110 1734225666
 !i10b 1
-!s100 2Z:^=h4;>JPf@9lV36d:21
+!s100 o1jAZN@6Ge5DbkFX7S3[22
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IB8[JED:HoYfZzf6fWc_lO1
+IOfAb<YmMXIcX;Fm71QCS>3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1731972029
-8single_cycle.vo
-Fsingle_cycle.vo
+Z4 w1734225652
+Z5 8single_cycle.vo
+Z6 Fsingle_cycle.vo
 !i122 0
-L0 32 71032
-Z4 OV;L;2020.1;71
+L0 68968 45
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1731972043.000000
-!s107 single_cycle.vo|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|single_cycle.vo|
+Z8 !s108 1734225665.000000
+Z9 !s107 single_cycle.vo|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|single_cycle.vo|
 !i113 1
-Z5 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+.
-Z6 tCvgOpt 0
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+.
+Z13 tCvgOpt 0
+vsingle_cycle
+R1
+!i10b 1
+!s100 A2I_8W9_dAnWL2GKTVRoz0
+R2
+IDCVXFla4AXODmo>R9`Pad2
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 32 68935
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
 vsingle_cycle_tb1
 R1
 !i10b 1
-!s100 A4I=k5F_4Q5<C<^4jbMSG1
+!s100 CNR?B@1AP52]17LSMjQO@0
 R2
-IK4=^?C[haR9Qe5Zgj>54M0
+IPUcSodl_PZfK86eUa[:Y=2
 R3
 R0
-w1731956213
-8C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v
-FC:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v
+w1734225469
+8C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v
+FC:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v
 !i122 1
-L0 3 47
-R4
+L0 3 71
+R7
 r1
 !s85 0
 31
-!s108 1731972044.000000
-!s107 C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main|C:/Users/User/Desktop/MIPS_Single_Cycle-main/single_cycle_tb1.v|
+!s108 1734225666.000000
+!s107 C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code|C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code/single_cycle_tb1.v|
 !i113 1
-R5
-!s92 -vlog01compat -work work +incdir+C:/Users/User/Desktop/MIPS_Single_Cycle-main
-R6
+R11
+!s92 -vlog01compat -work work {+incdir+C:/Users/shara/Desktop/JoSCD/Development Phase/Single_Cycle_Code}
+R13

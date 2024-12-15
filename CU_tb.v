@@ -1,15 +1,16 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
 module CU_tb;
-
-    // Declare testbench signals
+    // Inputs
     reg [5:0] OpCode, Funct;
+
+    // Outputs
     wire RegDst, BranchEq, BranchNeq, InvalidInst, Jump, JumpReg;
     wire MemRdEn, MemtoReg, MemWrEn, RegWrEn, ALUSrc1, ALUSrc2;
     wire [3:0] ALUOp;
 
     // Instantiate the Control Unit
-    ControlUnit CU (
+    ControlUnit dut (   
         .OpCode(OpCode),
         .Funct(Funct),
         .RegDst(RegDst),
@@ -27,53 +28,44 @@ module CU_tb;
         .ALUSrc2(ALUSrc2)
     );
 
-    // Test vectors
+    // Test Procedure
     initial begin
-        // Test R-type (add)
-        OpCode = 6'h0; Funct = 6'h20; #10;
-        $display("R-Type (add): RegDst=%b, ALUOp=%b", RegDst, ALUOp);
+        // Display Header
+        $display("Time\tOpCode\tFunct\tRegDst\tALUOp\tMemRdEn\tMemWrEn\tBranchEq\tJump\tJumpReg\tInvalidInst");
+        $monitor("%0t\t%h\t%h\t%b\t%b\t%b\t%b\t%b\t%b\t%b\t%b", 
+                 $time, OpCode, Funct, RegDst, ALUOp, MemRdEn, MemWrEn, BranchEq, Jump, JumpReg, InvalidInst);
 
-        // Test R-type (sub)
-        OpCode = 6'h0; Funct = 6'h22; #10;
-        $display("R-Type (sub): RegDst=%b, ALUOp=%b", RegDst, ALUOp);
+        // Initialize Inputs
+        OpCode = 6'b000000; Funct = 6'b000000;
 
-        // Test addi
-        OpCode = 6'h8; Funct = 6'h0; #10;
-        $display("addi: RegDst=%b, ALUOp=%b", RegDst, ALUOp);
+        // R-type Instructions
+        OpCode = 6'h00; Funct = 6'h20; #10; // add
+        OpCode = 6'h00; Funct = 6'h22; #10; // sub
+        OpCode = 6'h00; Funct = 6'h24; #10; // and
+        OpCode = 6'h00; Funct = 6'h25; #10; // or
+        OpCode = 6'h00; Funct = 6'h2a; #10; // slt
+        OpCode = 6'h00; Funct = 6'h00; #10; // sll
+        OpCode = 6'h00; Funct = 6'h08; #10; // jr
 
-        // Test ori
-        OpCode = 6'hD; Funct = 6'h0; #10;
-        $display("ori: RegDst=%b, ALUOp=%b", RegDst, ALUOp);
+        // I-type Instructions
+        OpCode = 6'h08; Funct = 6'bxxxxxx; #10; // addi
+        OpCode = 6'h0C; Funct = 6'bxxxxxx; #10; // andi
+        OpCode = 6'h0D; Funct = 6'bxxxxxx; #10; // ori
+        OpCode = 6'h0E; Funct = 6'bxxxxxx; #10; // xori
+        OpCode = 6'h0A; Funct = 6'bxxxxxx; #10; // slti
+        OpCode = 6'h23; Funct = 6'bxxxxxx; #10; // lw
+        OpCode = 6'h2B; Funct = 6'bxxxxxx; #10; // sw
+        OpCode = 6'h04; Funct = 6'bxxxxxx; #10; // beq
+        OpCode = 6'h05; Funct = 6'bxxxxxx; #10; // bne
 
-        // Test lw
-        OpCode = 6'h23; Funct = 6'h0; #10;
-        $display("lw: MemRdEn=%b, MemtoReg=%b, ALUOp=%b", MemRdEn, MemtoReg, ALUOp);
+        // J-type Instructions
+        OpCode = 6'h02; Funct = 6'bxxxxxx; #10; // j
+        OpCode = 6'h03; Funct = 6'bxxxxxx; #10; // jal
 
-        // Test sw
-        OpCode = 6'h2B; Funct = 6'h0; #10;
-        $display("sw: MemWrEn=%b, ALUOp=%b", MemWrEn, ALUOp);
+        // Invalid Instruction
+        OpCode = 6'h3F; Funct = 6'bxxxxxx; #10; // Invalid
 
-        // Test beq
-        OpCode = 6'h4; Funct = 6'h0; #10;
-        $display("beq: BranchEq=%b, ALUOp=%b", BranchEq, ALUOp);
-
-        // Test bne
-        OpCode = 6'h5; Funct = 6'h0; #10;
-        $display("bne: BranchNeq=%b, ALUOp=%b", BranchNeq, ALUOp);
-
-        // Test jump
-        OpCode = 6'h2; Funct = 6'h0; #10;
-        $display("jump: Jump=%b", Jump);
-
-        // Test jr
-        OpCode = 6'h8; Funct = 6'h0; #10;
-        $display("jr: JumpReg=%b", JumpReg);
-
-        // Test invalid instruction
-        OpCode = 6'hFF; Funct = 6'hFF; #10;
-        $display("Invalid Instruction: InvalidInst=%b", InvalidInst);
-
+        // Finish simulation
         $finish;
     end
-
 endmodule
